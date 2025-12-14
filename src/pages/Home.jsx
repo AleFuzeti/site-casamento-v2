@@ -4,7 +4,7 @@ import { FiHeart, FiCalendar, FiMapPin, FiGift } from 'react-icons/fi'
 
 function Home() {
   // Contador regressivo - Data do casamento: 06 de junho de 2026
-  const weddingDate = new Date('2026-06-06T16:30:00')
+  const weddingDate = new Date('2026-06-06T16:00:00-03:00') // explicitamente GMT-3
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
 
   function calculateTimeLeft() {
@@ -32,7 +32,7 @@ function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section id="topo" className="relative flex flex-col items-center justify-center bg-gradient-to-br from-wedding-olive/20 to-wedding-rose/20 py-8">
+      <section id="topo" className="relative flex flex-col items-center justify-center bg-gradient-to-br from-wedding-olive/20 to-wedding-rose/20 pb-8">
         <a href="#topo" className="w-full mb-8 cursor-pointer">
           <img 
             src="/images/header.png" 

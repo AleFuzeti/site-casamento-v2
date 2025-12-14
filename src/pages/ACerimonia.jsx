@@ -19,7 +19,7 @@ function ACerimonia() {
             Estamos muito felizes em compartilhar esse momento especial com você!
           </p>
           <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mb-4">
-            O nosso casamento será realizado no dia <strong>06 de junho de 2026, às 16h30</strong>, na Chácara da Dinda em Londrina-PR.
+            O nosso casamento será realizado no dia <strong>06 de junho de 2026, às 16h00</strong>, na Chácara da Dinda em Londrina-PR.
           </p>
           <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mb-4">
             Esperamos que você possa nos acompanhar nesse dia tão especial!
@@ -52,7 +52,7 @@ function ACerimonia() {
               Horário
             </h2>
             <p className="text-3xl font-bold text-wedding-rose mb-2">
-              16h30
+              16h00
             </p>
             <p className="text-gray-600">
               Início da Cerimônia
@@ -94,7 +94,7 @@ function ACerimonia() {
             <div className="w-full rounded-lg overflow-hidden mb-4">
               <iframe
                 title="Mapa do local"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.0000000000005!2d-51.16999968502141!3d-23.3100009847466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8c9b4b4b4b4b4%3A0x4b8b4b4b4b4b4b4!2sRua%20dos%20Eventos%2C%20123%20-%20Centro%2C%20Londrina%20-%20PR%2C%2086010-000!5e0!3m2!1spt-BR!2sbr!4v1633660000000!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.359068256362!2d-51.1565507248982!3d-23.339002378953268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb4350ff58f47f%3A0x8c9204cafc59fcc3!2sCh%C3%A1cara%20da%20Dinda%20-%20Londrina!5e0!3m2!1spt-BR!2sbr!4v1765722292145!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -134,10 +134,10 @@ function ACerimonia() {
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-3 bg-wedding-rose/10 rounded-lg">
-                <FiClock className="text-wedding-rose text-2xl flex-shrink-0" />
+              <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
+                <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
-                  <span className="font-bold text-wedding-rose">16h00</span>
+                  <span className="font-bold text-wedding-olive">16h00</span>
                   <span className="text-gray-700 ml-2">Início da cerimônia</span>
                 </div>
               </div>
@@ -150,10 +150,10 @@ function ACerimonia() {
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-3 bg-wedding-rose/10 rounded-lg">
-                <FiClock className="text-wedding-rose text-2xl flex-shrink-0" />
+              <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
+                <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
-                  <span className="font-bold text-wedding-rose">18h00</span>
+                  <span className="font-bold text-wedding-olive">18h00</span>
                   <span className="text-gray-700 ml-2">Início do jantar</span>
                 </div>
               </div>
@@ -166,10 +166,10 @@ function ACerimonia() {
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-3 bg-wedding-rose/10 rounded-lg">
-                <FiClock className="text-wedding-rose text-2xl flex-shrink-0" />
+              <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
+                <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
-                  <span className="font-bold text-wedding-rose">22h00</span>
+                  <span className="font-bold text-wedding-olive">22h00</span>
                   <span className="text-gray-700 ml-2">Final de cerimônia</span>
                 </div>
               </div>
