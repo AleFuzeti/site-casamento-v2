@@ -2,12 +2,42 @@
 
 Site moderno e elegante desenvolvido em React para celebrar nosso casamento!
 
-## 🎨 Cores do Tema
+## 🚀 QUER PUBLICAR AGORA?
 
-- **Verde Oliva:** #767745
-- **Rosa Acinzentado:** #c0afad
+**👉 Leia: `COMECE-AQUI.md`** ⬅️
 
-## 📋 Páginas
+Ou execute direto:
+```bash
+npm run deploy
+```
+
+Guias úteis:
+- **`3-PASSOS.md`** - Deploy em 3 passos
+- **`DEPLOY.md`** - Guia completo com todas as opções
+- **`DEPLOY-CHECKLIST.md`** - Checklist pré-deploy
+
+---
+
+## 📚 Documentação Principal
+
+- **`COMECE-AQUI.md`** - Navegação visual (COMECE POR AQUI!)
+- **`RESUMO-PROJETO.md`** - Visão geral do projeto
+- **`DEPLOY.md`** - Guia completo de deployment
+- **`DEPLOY-CHECKLIST.md`** - Checklist antes de publicar
+
+---
+
+## 📚 Documentação Técnica
+
+- **`PRESENTES-README.md`** - Sistema de presentes e PIX
+- **`CONFIRMACAO-README.md`** - Sistema de confirmação
+- **`API-README.md`** - Backend Express (opcional)
+- **`FIREBASE-README.md`** - Firebase (opcional)
+- **`PERSONALIZACAO.md`** - Guia de personalização
+
+---
+
+## 📋 Páginas do Site
 
 1. **Início** - Página principal com contagem regressiva
 2. **O Casal** - Nossa história e timeline do relacionamento
@@ -15,7 +45,9 @@ Site moderno e elegante desenvolvido em React para celebrar nosso casamento!
 4. **Confirmação de Presença** - Formulário para confirmar presença
 5. **Lista de Presentes** - Sugestões de presentes e opções de PIX
 
-## 🚀 Como Executar
+---
+
+## 🚀 Como Executar Localmente
 
 ### Pré-requisitos
 
@@ -46,16 +78,6 @@ npm run preview
 - **React Router** - Navegação entre páginas
 - **React Icons** - Ícones modernos
 
-## 📝 Personalização
-
-Para personalizar o site com suas informações:
-
-1. **Data do Casamento:** Edite em `src/pages/Home.jsx` (linha 8)
-2. **Nomes dos Noivos:** Substitua os placeholders `[Noivo]` e `[Noiva]`
-3. **Informações da Cerimônia:** Edite `src/pages/ACerimonia.jsx`
-4. **História do Casal:** Adicione em `src/pages/OCasal.jsx`
-5. **Chave PIX:** Configure em `src/pages/ListaPresentes.jsx`
-
 ## 📁 Estrutura do Projeto
 
 ```
@@ -81,11 +103,33 @@ casamento-react-2/
 
 ## 🌐 Deploy
 
-Sugestões de plataformas para deploy gratuito:
+### 🚀 Deploy no GitHub Pages (Recomendado)
 
-- **Vercel** - [vercel.com](https://vercel.com)
-- **Netlify** - [netlify.com](https://netlify.com)
-- **GitHub Pages** - [pages.github.com](https://pages.github.com)
+**✅ CONFIGURAÇÃO COMPLETA! Pronto para deploy!**
+
+Execute apenas um comando:
+
+```bash
+npm run deploy
+```
+
+Depois configure no GitHub (Settings → Pages → Branch: `gh-pages`) e acesse:
+```
+https://alefuzeti.github.io/site-casamento-v2/
+```
+
+**Guias completos:**
+- **`3-PASSOS.md`** - Deploy em 3 passos
+- **`DEPLOY.md`** - Guia detalhado passo a passo
+- **`DEPLOY-CHECKLIST.md`** - Checklist antes de publicar
+
+### Outras Plataformas
+
+- **Vercel** - [vercel.com](https://vercel.com) - Suporta backend Express
+- **Netlify** - [netlify.com](https://netlify.com) - Deploy automático
+- **GitHub Pages** - ✅ Configurado!
+
+Nota: GitHub Pages hospeda apenas frontend. Para usar o backend Express, veja `DEPLOY.md`.
 
 ## 📸 Adicionando Fotos
 
@@ -101,13 +145,6 @@ Sugestões de plataformas para deploy gratuito:
 - ✅ Lista de presentes com opção PIX
 - ✅ Timeline do relacionamento
 - ✅ Informações da cerimônia e recepção
-
-## 📞 Suporte
-
-Para dúvidas ou problemas, consulte a documentação:
-- [React](https://react.dev)
-- [Vite](https://vitejs.dev)
-- [Tailwind CSS](https://tailwindcss.com)
 
 ---
 

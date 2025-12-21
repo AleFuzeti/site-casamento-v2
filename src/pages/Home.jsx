@@ -32,7 +32,7 @@ function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section id="topo" className="relative flex flex-col items-center justify-center bg-gradient-to-br from-wedding-olive/20 to-wedding-rose/20 pb-8">
+      <section id="topo" className="relative flex flex-col items-center justify-center bg-gradient-to-br to-wedding-olive/20 from-wedding-olive/20 pb-8">
         <a href="#topo" className="w-full mb-8 cursor-pointer">
           <img 
             src="/images/header.png" 

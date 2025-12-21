@@ -4,7 +4,7 @@ function ACerimonia() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-wedding-olive/20 to-wedding-rose/20">
+      <section className="bg-gradient-to-br from-wedding-olive/20 to-wedding-olive/20">
         <div className="w-full mb-8">
           <img 
             src="/images/header.png" 
