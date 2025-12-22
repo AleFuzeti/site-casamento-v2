@@ -135,7 +135,7 @@ function Confirmacao() {
     <div className="min-h-screen">
       <section id="topo" className="bg-gradient-to-br to-wedding-olive/20 from-wedding-olive/20">
         <a href="#topo" className="block w-full cursor-pointer">
-          <img src="/images/header.png" alt="Carolina & Alexandre" className="w-full h-auto" />
+          <img src={`${import.meta.env.BASE_URL}images/header.png`} alt="Carolina & Alexandre" className="w-full h-auto" />
         </a>
       </section>
 

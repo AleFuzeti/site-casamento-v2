@@ -8,7 +8,7 @@ import ListaPresentes from './pages/ListaPresentes'
 
 function App() {
   return (
-    <Router basename="/casamento-react-2">
+    <Router basename="/site-casamento-v2">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

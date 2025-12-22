@@ -7,7 +7,7 @@ function ACerimonia() {
       <section className="bg-gradient-to-br from-wedding-olive/20 to-wedding-olive/20">
         <div className="w-full mb-8">
           <img 
-            src="/images/header.png" 
+            src={`${import.meta.env.BASE_URL}images/header.png`} 
             alt="Carolina & Alexandre" 
             className="w-full h-auto"
           />

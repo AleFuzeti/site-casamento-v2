@@ -35,7 +35,7 @@ function Home() {
       <section id="topo" className="relative flex flex-col items-center justify-center bg-gradient-to-br to-wedding-olive/20 from-wedding-olive/20 pb-8">
         <a href="#topo" className="w-full mb-8 cursor-pointer">
           <img 
-            src="/images/header.png" 
+            src={`${import.meta.env.BASE_URL}images/header.png`} 
             alt="Carolina & Alexandre" 
             className="w-full h-auto"
           />

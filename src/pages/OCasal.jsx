@@ -29,7 +29,7 @@ function OCasal() {
             <section className="bg-gradient-to-br to-wedding-olive/20 from-wedding-olive/20">
                 <div className="w-full mb-8">
                     <img
-                        src="/images/header.png"
+                        src={`${import.meta.env.BASE_URL}images/header.png`}
                         alt="Carolina & Alexandre"
                         className="w-full h-auto"
                     />
@@ -121,7 +121,9 @@ function OCasal() {
                             title={showSecretNoiva ? "Easter egg encontrado! 🎉" : `Cliques: ${clicksNoiva}/5`}
                         >
                             <img
-                                src={showSecretNoiva ? "/images/noiva_secret.jpeg" : "/images/noiva.png"}
+                                src={showSecretNoiva 
+                                    ? `${import.meta.env.BASE_URL}images/noiva_secret.jpeg` 
+                                    : `${import.meta.env.BASE_URL}images/noiva.png`}
                                 alt="Carolina"
                                 className="w-full h-full object-cover"
                             />
@@ -146,7 +148,9 @@ function OCasal() {
                             title={showSecretNoivo ? "Easter egg encontrado! 🎉" : `Cliques: ${clicksNoivo}/5`}
                         >
                             <img
-                                src={showSecretNoivo ? "/images/noivo_secret.jpeg" : "/images/noivo.png"}
+                                src={showSecretNoivo 
+                                    ? `${import.meta.env.BASE_URL}images/noivo_secret.jpeg` 
+                                    : `${import.meta.env.BASE_URL}images/noivo.png`}
                                 alt="Alexandre"
                                 className="w-full h-full object-cover"
                             />
@@ -288,7 +292,7 @@ function OCasal() {
                         <div className="w-full md:w-1/3">
                             <div className="aspect-square bg-gradient-to-br from-wedding-olive/10 to-wedding-rose/10 rounded-lg overflow-hidden shadow-lg">
                                 <img
-                                    src="/images/jogos.png"
+                                    src={`${import.meta.env.BASE_URL}images/jogos.png`}
                                     alt="Jogos de Tabuleiro"
                                     className="w-full h-full object-cover"
                                 />
@@ -394,9 +398,9 @@ function OCasal() {
                             <h4 className="text-center text-lg font-bold text-wedding-olive mb-4">Personagens</h4>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                 {[
-                                    { name: 'Nassima', src: '/images/chars/nassima.png', alt: 'Nassima' },
-                                    { name: 'Leran', src: '/images/chars/leran.png', alt: 'Leran' },
-                                    { name: 'Thanatus', src: '/images/chars/thanatus.png', alt: 'Thanatus' },
+                                    { name: 'Nassima', src: `${import.meta.env.BASE_URL}images/chars/nassima.png`, alt: 'Nassima' },
+                                    { name: 'Leran', src: `${import.meta.env.BASE_URL}images/chars/leran.png`, alt: 'Leran' },
+                                    { name: 'Thanatus', src: `${import.meta.env.BASE_URL}images/chars/thanatus.png`, alt: 'Thanatus' },
                                 ].map((p) => (
                                     <div key={p.name} className="flex flex-col items-center">
                                         <div className="w-36 h-36 sm:w-40 sm:h-40 bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 rounded-lg overflow-hidden shadow-md">
