@@ -1,7 +1,7 @@
 // src/services/convidadosService.js
 // Serviço para comunicação com a API backend
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://bot-discord-b7si.onrender.com/api';
 
 export const convidadosService = {
   // Buscar todos os convidados
