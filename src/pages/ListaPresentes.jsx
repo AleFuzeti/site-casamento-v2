@@ -14,13 +14,13 @@ function ListaPresentes() {
 
   // Carregar presentes do JSON
   useEffect(() => {
-    fetch('/assets/static/presentes.json')
+    fetch(`${import.meta.env.BASE_URL}assets/static/presentes.json`)
       .then(response => response.json())
       .then(data => {
         // Mapear foto para imagem e adicionar caminho completo
         const presentesComImagem = data.map(presente => ({
           ...presente,
-          imagem: `/assets/presentes/${presente.foto}`
+          imagem: `${import.meta.env.BASE_URL}assets/presentes/${presente.foto}`
         }))
         setPresentes(presentesComImagem)
         setPresentesFiltrados(presentesComImagem)
