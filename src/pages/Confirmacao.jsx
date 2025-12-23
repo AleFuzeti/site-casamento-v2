@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import convidadosData from '../data/convidados.json'
+import { convidadosService } from '../services/convidadosService'
 
 const DATA_LIMITE = new Date('2026-05-01T23:59:59')
 
@@ -14,22 +14,23 @@ function Confirmacao() {
   const [listaSimples, setListaSimples] = useState(false)
   const [mensagemConfirmacao, setMensagemConfirmacao] = useState('')
 
-  useEffect(() => {
-    // Tentar carregar dados salvos no localStorage primeiro
-    const dadosSalvos = localStorage.getItem('convidados')
-    
-    if (dadosSalvos) {
-      console.log('📦 Carregando dados do localStorage')
-      setConvidados(JSON.parse(dadosSalvos))
-    } else {
-      console.log('� Carregando dados do arquivo JSON')
-      setConvidados(convidadosData)
-      // Salvar no localStorage pela primeira vez
-      localStorage.setItem('convidados', JSON.stringify(convidadosData))
+  // Função para carregar convidados da API
+  const carregarConvidados = async () => {
+    try {
+      const dados = await convidadosService.listarConvidados()
+      if (dados.success) {
+        setConvidados(dados.convidados)
+        console.log('☁️ Dados carregados da nuvem:', dados.convidados.length, 'convidados')
+      }
+    } catch (error) {
+      console.error('❌ Erro ao carregar convidados:', error)
     }
-    
+  }
+
+  useEffect(() => {
+    // Carregar dados da API/nuvem
+    carregarConvidados()
     setDataLimitePassou(new Date() > DATA_LIMITE)
-    console.log('📊 Convidados carregados')
   }, [])
 
   const buscarConvidado = () => {
@@ -64,35 +65,45 @@ function Confirmacao() {
     )
   }
 
-  const confirmarPresenca = (e) => {
+  const confirmarPresenca = async (e) => {
     e.preventDefault()
-    
-    const novoConvidado = {
-      ...convidadoAtual,
-      confirmados: [...selecionados],
-      confirmado: selecionados.length > 0,
-      dataConfirmacao: new Date().toISOString()
+    setLoading(true)
+    setMensagemConfirmacao('')
+
+    try {
+      // Enviar para a API
+      const resultado = await convidadosService.confirmarPresenca(convidadoAtual.codigo, selecionados)
+      
+      if (resultado.success) {
+        // Atualizar dados localmente após confirmação
+        await carregarConvidados()
+        
+        // Atualizar convidado atual
+        const convidadoAtualizado = {
+          ...convidadoAtual,
+          confirmados: [...selecionados],
+          confirmado: selecionados.length > 0,
+          dataConfirmacao: new Date().toISOString()
+        }
+        setConvidadoAtual(convidadoAtualizado)
+        
+        const msg = selecionados.length > 0 
+          ? `✅ Presença confirmada na nuvem! ${selecionados.length} pessoa(s) confirmada(s).`
+          : '❌ Presença cancelada.'
+        
+        setMensagemConfirmacao(msg)
+        setTimeout(() => setMensagemConfirmacao(''), 5000)
+      } else {
+        setMensagemConfirmacao(`❌ Erro: ${resultado.message}`)
+        setTimeout(() => setMensagemConfirmacao(''), 5000)
+      }
+    } catch (error) {
+      console.error('❌ Erro ao confirmar:', error)
+      setMensagemConfirmacao('❌ Erro ao salvar. Tente novamente.')
+      setTimeout(() => setMensagemConfirmacao(''), 5000)
     }
     
-    // Atualizar lista de convidados
-    const novosConvidados = convidados.map(c => 
-      c.codigo === novoConvidado.codigo ? novoConvidado : c
-    )
-    
-    // Salvar no estado
-    setConvidados(novosConvidados)
-    setConvidadoAtual(novoConvidado)
-    
-    // 💾 SALVAR NO LOCALSTORAGE
-    localStorage.setItem('convidados', JSON.stringify(novosConvidados))
-    console.log('💾 Dados salvos no localStorage!')
-    
-    const msg = selecionados.length > 0 
-      ? `✅ Presença confirmada! ${selecionados.length} pessoa(s) confirmada(s).`
-      : '❌ Presença cancelada.'
-    
-    setMensagemConfirmacao(msg)
-    setTimeout(() => setMensagemConfirmacao(''), 5000)
+    setLoading(false)
   }
 
   const gerarListaSimples = () => {
@@ -118,19 +129,6 @@ function Confirmacao() {
     }
   }
 
-  const resetarDados = () => {
-    if (confirm('⚠️ Tem certeza que deseja resetar TODOS os dados? Isso apagará todas as confirmações!')) {
-      localStorage.removeItem('convidados')
-      setConvidados(convidadosData)
-      localStorage.setItem('convidados', JSON.stringify(convidadosData))
-      setRelatorio(null)
-      setConvidadoAtual(null)
-      setMensagemConfirmacao('🔄 Dados resetados para o estado inicial!')
-      setTimeout(() => setMensagemConfirmacao(''), 3000)
-      console.log('🔄 Dados resetados!')
-    }
-  }
-
   return (
     <div className="min-h-screen">
       <section id="topo" className="bg-gradient-to-br to-wedding-olive/20 from-wedding-olive/20">
@@ -146,7 +144,7 @@ function Confirmacao() {
             Digite seu código de convite para confirmar sua presença
           </p>
           <p className="text-center text-sm text-gray-500 mb-8">
-            💾 Suas confirmações são salvas automaticamente
+            ☁️ Suas confirmações são salvas na nuvem automaticamente
           </p>
 
           <div className="card mb-8">
@@ -190,13 +188,6 @@ function Confirmacao() {
                     className={`px-4 py-2 rounded-lg text-sm font-medium ${listaSimples ? 'bg-wedding-rose text-white' : 'bg-gray-200 text-gray-700'}`}
                   >
                     📝 Lista Simples
-                  </button>
-                  <button 
-                    onClick={resetarDados}
-                    className="px-4 py-2 bg-orange-500 text-white rounded-lg text-sm hover:bg-orange-600"
-                    title="Resetar todas as confirmações"
-                  >
-                    🔄 Resetar Dados
                   </button>
                   <button onClick={() => { setRelatorio(null); setListaSimples(false) }} className="px-4 py-2 bg-red-500 text-white rounded-lg text-sm">
                     ✖ Fechar
@@ -297,8 +288,8 @@ function Confirmacao() {
                       </label>
                     ))}
                   </div>
-                  <button type="submit" className="btn-primary w-full py-4 text-lg">
-                    Confirmar Presença
+                  <button type="submit" className="btn-primary w-full py-4 text-lg" disabled={loading}>
+                    {loading ? '⏳ Salvando...' : 'Confirmar Presença'}
                   </button>
                   <p className="mt-3 text-center text-gray-600 text-sm">
                     Você pode alterar até {DATA_LIMITE.toLocaleDateString('pt-BR')}.

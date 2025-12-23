@@ -7,8 +7,11 @@ import Confirmacao from './pages/Confirmacao'
 import ListaPresentes from './pages/ListaPresentes'
 
 function App() {
+  // Em produção (gh-pages), usa '/site-casamento-v2/', em dev usa '/'
+  const basename = import.meta.env.PROD ? '/site-casamento-v2' : '/'
+  
   return (
-    <Router basename="/site-casamento-v2">
+    <Router basename={basename}>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

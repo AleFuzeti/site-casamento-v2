@@ -1,9 +1,31 @@
 // src/services/convidadosService.js
 // Serviço para comunicação com a API backend
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://bot-discord-b7si.onrender.com/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://server-casamento.onrender.com/api';
 
 export const convidadosService = {
+  // Listar todos os convidados (formato com success)
+  async listarConvidados() {
+    try {
+      const response = await fetch(`${API_URL}/convidados`);
+      if (!response.ok) {
+        throw new Error('Erro ao buscar convidados');
+      }
+      const data = await response.json();
+      console.log('📊 Convidados carregados da API:', data.length);
+      return {
+        success: true,
+        convidados: data
+      };
+    } catch (error) {
+      console.error('❌ Erro ao buscar convidados:', error);
+      return {
+        success: false,
+        convidados: []
+      };
+    }
+  },
+
   // Buscar todos os convidados
   async buscarConvidados() {
     try {
