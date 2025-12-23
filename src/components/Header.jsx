@@ -7,8 +7,7 @@ function Header() {
   const location = useLocation()
 
   const menuItems = [
-    { path: '/', label: 'Início' },
-    { path: '/o-casal', label: 'O Casal' },
+    { path: '/', label: 'O Casal' },
     { path: '/a-cerimonia', label: 'A Cerimônia' },
     { path: '/confirmacao', label: 'Confirmação' },
     { path: '/lista-presentes', label: 'Lista de Presentes' },

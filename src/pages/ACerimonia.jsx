@@ -1,10 +1,11 @@
 import { FiCalendar, FiClock, FiMapPin, FiInfo } from 'react-icons/fi'
+import Countdown from '../components/Countdown'
 
 function ACerimonia() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-br from-wedding-olive/20 to-wedding-olive/20">
+      <section className="bg-[#767745] text-white font-bold">
         <div className="w-full mb-8">
           <img 
             src={`${import.meta.env.BASE_URL}images/header.png`} 
@@ -14,17 +15,17 @@ function ACerimonia() {
         </div>
         
         <div className="section-container">
-          <h1 className="page-title">A Cerimônia</h1>
-          <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mb-4">
+          <h1 className="page-title text-white">A Cerimônia</h1>
+          <p className="text-center text-lg max-w-3xl mx-auto mb-4">
             Estamos muito felizes em compartilhar esse momento especial com você!
           </p>
-          <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mb-4">
+          <p className="text-center text-lg max-w-3xl mx-auto mb-4">
             O nosso casamento será realizado no dia <strong>06 de junho de 2026, às 16h00</strong>, na Chácara da Dinda em Londrina-PR.
           </p>
-          <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mb-4">
+          <p className="text-center text-lg max-w-3xl mx-auto mb-4">
             Esperamos que você possa nos acompanhar nesse dia tão especial!
           </p>
-          <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto font-serif italic">
+          <p className="text-center text-lg max-w-3xl mx-auto font-serif italic">
             Com amor, Carolina e Alexandre.
           </p>
         </div>
@@ -80,12 +81,12 @@ function ACerimonia() {
               Londrina - PR
             </p>
             
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-4" style={{ textAlign: "justify" }}>
               A cerimônia será realizada na Chácara da Dinda, localizada em Londrina-PR.
               O local possui uma linda área verde, ideal para a cerimônia ao ar livre.
             </p>
             
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-4" style={{ textAlign: "justify" }}>
               Contamos com estacionamento próprio e segurança para garantir a tranquilidade de todos os convidados.
               Esperamos que todos aproveitem o espaço e a natureza ao nosso redor!
             </p>
@@ -116,10 +117,10 @@ function ACerimonia() {
       </section>
 
       {/* Programação do Dia */}
-      <section className="section-container">
+      <section className="section-container bg-[#767745] ">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-serif font-bold text-wedding-olive mb-4">
+            <h2 className="text-3xl font-serif font-bold text-white mb-4">
               Programação do Dia
             </h2>
           </div>
@@ -252,6 +253,9 @@ function ACerimonia() {
           </div>
         </div>
       </section>
+
+      {/* Contagem Regressiva até o casamento */}
+      <Countdown />
     </div>
   )
 }

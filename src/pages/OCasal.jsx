@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FiHeart } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
+import { FiHeart, FiCalendar, FiGift } from 'react-icons/fi'
 
 function OCasal() {
     const [clicksNoiva, setClicksNoiva] = useState(0)
@@ -26,7 +27,7 @@ function OCasal() {
     return (
         <div className="min-h-screen">
             {/* Header Section */}
-            <section className="bg-gradient-to-br to-wedding-olive/20 from-wedding-olive/20">
+            <section className="bg-[#767745] text-white font-bold">
                 <div className="w-full mb-8">
                     <img
                         src={`${import.meta.env.BASE_URL}images/header.png`}
@@ -35,26 +36,17 @@ function OCasal() {
                     />
                 </div>
 
-                <div className="section-container">
-                    <p className="text-center text-3xl font-serif text-wedding-rose mb-4">
-                        06.06.2026
-                    </p>
-                    <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto">
-                        Nossa história de amor começou em 2022 e desde então temos construído
-                        momentos inesquecíveis juntos.
-                    </p>
-                </div>
             </section>
 
             {/* Nossa História */}
-            <section className="section-container">
+            <section className="bg-[#767745] section-container" style={{ textAlign: "justify" }}>
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-12">
-                        <FiHeart className="text-wedding-rose text-5xl mx-auto mb-4" />
-                        <h2 className="text-3xl font-serif font-bold text-wedding-olive mb-4">
+                        <FiHeart className="text-white text-5xl mx-auto mb-4" />
+                        <h2 className="text-white page-title font-serif font-bold mb-4">
                             Nossa História
                         </h2>
-                        <p className="text-wedding-rose text-lg italic">
+                        <p className="text-white text-lg italic">
                             Uma história de amor, jogos e muito companheirismo
                         </p>
                     </div>
@@ -87,7 +79,7 @@ function OCasal() {
                         </p>
 
                         <div className="mt-8 pt-6 border-t-2 border-wedding-olive/20">
-                            <p className="text-gray-700 leading-relaxed text-lg text-center mb-4">
+                            <p className="text-gray-700 leading-relaxed text-lg mb-4">
                                 E assim chegamos ao <strong className="text-wedding-olive text-xl">6 de junho de 2026</strong> —
                                 o dia em que uniremos nossas vidas oficialmente, celebrando com todos que amamos.
                                 Será um dia de emoção, alegria, boa comida e muitas histórias para contar.
@@ -97,7 +89,7 @@ function OCasal() {
                                 ・ ✦ ・
                             </p>
 
-                            <p className="text-gray-700 leading-relaxed text-center italic text-lg">
+                            <p className="text-gray-700 leading-relaxed italic text-lg">
                                 Essa é apenas a primeira página de um livro que promete ser longo, cheio de
                                 aventuras, jogos, séries, plantinhas, desenhos e, principalmente, muito amor.
                             </p>
@@ -111,7 +103,7 @@ function OCasal() {
             </section>
 
             {/* Os Noivos */}
-            <section className="section-container bg-white/50">
+            <section className="section-container bg-[#767745]">
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {/* Noiva */}
                     <div className="card text-center">
@@ -132,10 +124,10 @@ function OCasal() {
                             Carolina
                         </h3>
                         <p className="text-gray-600 mb-4">A Noiva</p>
-                        <p className="text-gray-700 leading-relaxed text-left mb-4">
+                        <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
                             Nascida em 06 de março de 2001, a noiva pisciana é formada em Psicologia pela Universidade Estadual de Londrina, atuando em clínica particular, avaliação psicológica e orientação profissional.
                         </p>
-                        <p className="text-gray-700 leading-relaxed text-left">
+                        <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
                             Extremamente planejada e animada, a noiva adora cozinhar, cultivar plantas, pintar aquarelas e cantar. O que Alexandre mais admira na Carol é seu <strong>companheirismo</strong>.
                         </p>
                     </div>
@@ -159,10 +151,10 @@ function OCasal() {
                             Alexandre
                         </h3>
                         <p className="text-gray-600 mb-4">O Noivo</p>
-                        <p className="text-gray-700 leading-relaxed text-left mb-4">
+                        <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
                             Nascido em 27 de outubro de 2003, o noivo é formado em Computação na UEL. Atualmente trabalha como desenvolvedor.
                         </p>
-                        <p className="text-gray-700 leading-relaxed text-left">
+                        <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
                             O noivo adora tocar música, desenhar, ler e também gosta de jogar e mestrar RPG. O que Carolina mais admira no Ale é seu <strong>jeito de ser</strong>.
                         </p>
                     </div>
@@ -300,7 +292,7 @@ function OCasal() {
                         </div>
                         <div className="w-full md:w-2/3">
                             <h3 className="text-2xl font-bold text-wedding-olive mb-4">🎲 Jogos de Tabuleiro</h3>
-                            <p className="text-gray-700 leading-relaxed mb-4">
+                            <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
                                 Adoramos passar as noites jogando board games! De estratégia a cooperativos,
                                 cada partida é uma nova aventura. Nossos favoritos incluem jogos que desafiam
                                 nossa mente e fortalecem nosso trabalho em equipe.
@@ -337,7 +329,7 @@ function OCasal() {
                         </div>
                         <div className="w-full md:w-2/3 text-right">
                             <h3 className="text-2xl font-bold text-wedding-olive mb-4">🧩 Quebra-Cabeças</h3>
-                            <p className="text-gray-700 leading-relaxed">
+                            <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
                                 Montar quebra-cabeças juntos é uma de nossas atividades favoritas!
                                 É relaxante, desafiador e nos ensina paciência. Cada peça encaixada
                                 é como construir nossa vida: peça por peça, com amor e dedicação.
@@ -356,7 +348,7 @@ function OCasal() {
                         </div>
                         <div className="w-full md:w-2/3">
                             <h3 className="text-2xl font-bold text-wedding-olive mb-4">🎬 Filmes e Séries</h3>
-                            <p className="text-gray-700 leading-relaxed mb-4">
+                            <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
                                 Maratonar séries e assistir filmes é nosso programa perfeito!
                                 Pipoca, cobertor e boa companhia.
                             </p>
@@ -391,7 +383,7 @@ function OCasal() {
                         </div>
                         <div className="w-full md:w-2/3 text-right">
                             <h3 className="text-2xl font-bold text-wedding-olive mb-4">🛡️ RPG</h3>
-                            <p className="text-gray-700 leading-relaxed">
+                            <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
                                 Aventuras épicas em mundos imaginários! Jogar RPG juntos fortalece nossa criatividade e trabalho em equipe, além de proporcionar momentos inesquecíveis.
                             </p>
                             <div className="mt-6"></div>
@@ -417,6 +409,47 @@ function OCasal() {
 
 
             </section>
+
+            {/* Quick Info Section */}
+            <section className="section-container bg-white/50">
+                <div className="grid md:grid-cols-3 gap-8">
+                    <Link
+                        to="/confirmacao"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="card text-center hover:scale-105 transition-transform duration-300"
+                    >
+                        <FiHeart className="text-wedding-rose text-5xl mx-auto mb-4" />
+                        <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
+                            Confirme sua presença
+                        </h3>
+                        <p className="text-gray-600">
+                            Confirme sua presença
+                        </p>
+                    </Link>
+
+                    <Link to="/a-cerimonia" className="card text-center hover:scale-105 transition-transform duration-300">
+                        <FiCalendar className="text-wedding-olive text-5xl mx-auto mb-4" />
+                        <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
+                            A Cerimônia
+                        </h3>
+                        <p className="text-gray-600">
+                            Data, local e informações
+                        </p>
+                    </Link>
+
+                    <Link to="/lista-presentes" className="card text-center hover:scale-105 transition-transform duration-300">
+                        <FiGift className="text-wedding-rose text-5xl mx-auto mb-4" />
+                        <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
+                            Lista de Presentes
+                        </h3>
+                        <p className="text-gray-600">
+                            Escolha seu presente
+                        </p>
+                    </Link>
+                </div>
+            </section>
+
+            
         </div>
     )
 }

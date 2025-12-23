@@ -11,6 +11,7 @@ function ListaPresentes() {
   const [presenteSelecionado, setPresenteSelecionado] = useState(null)
   const [loading, setLoading] = useState(true)
   const [copiado, setCopiado] = useState(false)
+  const [activeSort, setActiveSort] = useState('relevancia')
 
   // Carregar presentes do JSON
   useEffect(() => {
@@ -35,16 +36,19 @@ function ListaPresentes() {
   // Funções de ordenação
   const ordenarPorRelevancia = () => {
     setPresentesFiltrados([...presentes])
+    setActiveSort('relevancia')
   }
 
   const ordenarPorMaiorPreco = () => {
     const ordenados = [...presentesFiltrados].sort((a, b) => b.preco - a.preco)
     setPresentesFiltrados(ordenados)
+    setActiveSort('maior')
   }
 
   const ordenarPorMenorPreco = () => {
     const ordenados = [...presentesFiltrados].sort((a, b) => a.preco - b.preco)
     setPresentesFiltrados(ordenados)
+    setActiveSort('menor')
   }
 
   // Função auxiliar para calcular CRC16 CCITT
@@ -174,7 +178,7 @@ function ListaPresentes() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-gradient-to-br to-wedding-olive/20 from-wedding-olive/20">
+      <section className="bg-[#767745] text-white font-bold">
         <div className="w-full mb-8">
           <img
             src={`${import.meta.env.BASE_URL}images/header.png`}
@@ -183,9 +187,9 @@ function ListaPresentes() {
           />
         </div>
 
-        <div className="section-container">
-          <h1 className="page-title">Lista de Presentes</h1>
-          <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto">
+        <div className="section-container" style={{ paddingBottom: 0 }}>
+          <h1 className="page-title text-white">Lista de Presentes</h1>
+          <p className="text-center text-white text-lg max-w-3xl mx-auto">
             Sua presença já é nosso maior presente, mas, se desejar nos presentear, ficaremos imensamente felizes! 
             Pensando nisso, preparamos uma lista de presentes virtual, feita com muito carinho.
           </p>
@@ -193,23 +197,22 @@ function ListaPresentes() {
       </section>
 
       {/* Mensagem dos Noivos */}
-      <section className="section-container">
+      <section className="bg-[#767745] section-container">
         <div className="max-w-4xl mx-auto">
-          <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20">
+          <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20" style={{ textAlign: "justify" }}>
             <FiHeart className="text-wedding-rose text-5xl mx-auto mb-4" />
-            <p className="text-center text-gray-700 text-lg leading-relaxed">
+            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
               Queridos amigos e familiares,
               </p>
-            <p className="text-center text-gray-700 text-lg leading-relaxed">
-
+            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
               Como já temos a maior parte dos itens necessários para a nossa casa, optamos por uma lista de presentes virtual.
               Os presentes são simbólicos, com um toque de bom humor, e representam uma contribuição para a nossa lua de mel e para a nossa vida a dois.
             </p>
-            <p className="text-center text-gray-700 text-lg leading-relaxed">
+            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
               Cada item possui um valor aproximado, para que você possa escolher aquele que mais combina com você e com o carinho que deseja nos oferecer.
               Ao selecionar um presente, você será redirecionado para o código PIX e QR Code, onde poderá realizar a contribuição de forma simples e segura.
             </p>
-            <p className="text-center text-gray-700 text-lg leading-relaxed">
+            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
               Agradecemos de coração todo o carinho, apoio e amor compartilhados conosco neste momento tão especial.
               Ter vocês ao nosso lado torna esse dia ainda mais inesquecível.
             </p>
@@ -227,19 +230,19 @@ function ListaPresentes() {
         <div className="max-w-4xl mx-auto mb-8 flex flex-wrap justify-center gap-4">
           <button
             onClick={ordenarPorRelevancia}
-            className="px-6 py-2 bg-wedding-olive text-white rounded-lg hover:bg-wedding-olive/80 transition-colors"
+            className={`px-6 py-2 rounded-lg transition-colors ${activeSort === 'relevancia' ? 'bg-wedding-olive text-white' : 'bg-wedding-rose text-white'}`}
           >
             Relevância
           </button>
           <button
             onClick={ordenarPorMenorPreco}
-            className="px-6 py-2 bg-wedding-rose text-white rounded-lg hover:bg-wedding-rose/80 transition-colors"
+            className={`px-6 py-2 rounded-lg transition-colors ${activeSort === 'menor' ? 'bg-wedding-olive text-white' : 'bg-wedding-rose text-white'}`}
           >
             Menor Preço
           </button>
           <button
             onClick={ordenarPorMaiorPreco}
-            className="px-6 py-2 bg-wedding-rose text-white rounded-lg hover:bg-wedding-rose/80 transition-colors"
+            className={`px-6 py-2 rounded-lg transition-colors ${activeSort === 'maior' ? 'bg-wedding-olive text-white' : 'bg-wedding-rose text-white'}`}
           >
             Maior Preço
           </button>
