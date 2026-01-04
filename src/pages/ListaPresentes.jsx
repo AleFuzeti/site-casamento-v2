@@ -187,12 +187,12 @@ function ListaPresentes() {
           />
         </div>
 
-        <div className="section-container" style={{ paddingBottom: 0 }}>
-          <h1 className="page-title text-white">Lista de Presentes</h1>
-          <p className="text-center text-white text-lg max-w-3xl mx-auto">
-            Sua presença já é nosso maior presente, mas, se desejar nos presentear, ficaremos imensamente felizes! 
-            Pensando nisso, preparamos uma lista de presentes virtual, feita com muito carinho.
-          </p>
+        <div className="section-container flex justify-center" style={{ paddingBottom: 0 }}>
+          <h1 className="page-title text-white mb-0 flex items-center gap-4">
+            <FiHeart className="text-5xl" />
+            Lista de Presentes
+            <FiHeart className="text-5xl" />
+          </h1>
         </div>
       </section>
 
@@ -200,7 +200,6 @@ function ListaPresentes() {
       <section className="bg-[#767745] section-container">
         <div className="max-w-4xl mx-auto">
           <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20" style={{ textAlign: "justify" }}>
-            <FiHeart className="text-wedding-rose text-5xl mx-auto mb-4" />
             <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
               Queridos amigos e familiares,
               </p>

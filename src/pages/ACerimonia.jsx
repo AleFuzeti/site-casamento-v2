@@ -14,25 +14,13 @@ function ACerimonia() {
           />
         </div>
         
-        <div className="section-container">
-          <h1 className="page-title text-white">A Cerimônia</h1>
-          <p className="text-center text-lg max-w-3xl mx-auto mb-4">
-            Estamos muito felizes em compartilhar esse momento especial com você!
-          </p>
-          <p className="text-center text-lg max-w-3xl mx-auto mb-4">
-            O nosso casamento será realizado no dia <strong>06 de junho de 2026, às 16h00</strong>, na Chácara da Dinda em Londrina-PR.
-          </p>
-          <p className="text-center text-lg max-w-3xl mx-auto mb-4">
-            Esperamos que você possa nos acompanhar nesse dia tão especial!
-          </p>
-          <p className="text-center text-lg max-w-3xl mx-auto font-serif italic">
-            Com amor, Carolina e Alexandre.
-          </p>
+        <div className="section-container p-4">
+          <h1 className="page-title text-white mb-0">A Cerimônia</h1>
         </div>
       </section>
 
       {/* Data e Horário */}
-      <section className="section-container">
+      <section className="section-container bg-[#767745]">
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="card text-center">
             <FiCalendar className="text-wedding-olive text-5xl mx-auto mb-4" />
@@ -63,9 +51,9 @@ function ACerimonia() {
       </section>
 
       {/* Local da Cerimônia */}
-      <section className="section-container bg-white/50">
+      <section className="section-container bg-white/50 pt-0">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
+          <div className="text-center my-8">
             <FiMapPin className="text-wedding-olive text-5xl mx-auto mb-4" />
             <h2 className="text-3xl font-serif font-bold text-wedding-olive mb-4">
               Local
@@ -78,7 +66,7 @@ function ACerimonia() {
             </h3>
             <p className="text-gray-700 mb-4">
               <strong>Localização:</strong><br />
-              Londrina - PR
+              R. Almeida Garret, 292 - Jardim Sao Jorge, Londrina - PR, 86047-000
             </p>
             
             <p className="text-gray-700 mb-4" style={{ textAlign: "justify" }}>
@@ -171,7 +159,7 @@ function ACerimonia() {
                 <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
                   <span className="font-bold text-wedding-olive">22h00</span>
-                  <span className="text-gray-700 ml-2">Final de cerimônia</span>
+                  <span className="text-gray-700 ml-2">Final da festa</span>
                 </div>
               </div>
             </div>
@@ -225,11 +213,11 @@ function ACerimonia() {
                   <tbody>
                     <tr className="bg-wedding-olive/5">
                       <td className="border border-gray-300 p-3 font-semibold">Pizzas Salgadas</td>
-                      <td className="border border-gray-300 p-3">4 queijos, Mussarela, Marguerita, Frango com Catupiry</td>
+                      <td className="border border-gray-300 p-3">Pepperoni, Calabresa, Frango com Catupiry, Marguerita, Milho Bacon, Lombo Barbecue, Quatro Queijos, Zucchini, Brócolis com Bacon, Portuguesa, Palmito, Strogonoff de Iscas de Mignon, Baiana, Aliche, Rúcula com Tomate Seco, Mussarela</td>
                     </tr>
                     <tr>
                       <td className="border border-gray-300 p-3 font-semibold">Pizzas Doces</td>
-                      <td className="border border-gray-300 p-3">Brigadeiro, Romeu e Julieta</td>
+                      <td className="border border-gray-300 p-3">Banana com Canela, Brigadeiro, Romeu e Julieta, Brasileirinha, Chocolate Branco com Coco Queimado, Sensação</td>
                     </tr>
                     <tr className="bg-wedding-olive/5">
                       <td className="border border-gray-300 p-3 font-semibold">Bebidas</td>

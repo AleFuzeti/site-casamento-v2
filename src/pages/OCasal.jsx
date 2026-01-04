@@ -41,21 +41,50 @@ function OCasal() {
             {/* Nossa História */}
             <section className="bg-[#767745] section-container" style={{ textAlign: "justify" }}>
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-12">
-                        <FiHeart className="text-white text-5xl mx-auto mb-4" />
+                    <div className="text-center mb-4">
+                        {/* Font tests: many examples to preview wedding fonts */}
+                        {/* <div className="mb-8">
+                            <h3 className="text-white text-xl font-semibold mb-4">Testes Tipográficos</h3>
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[
+                                    { key: 'playfair', name: 'Playfair Display', family: "'Playfair Display', serif" },
+                                    { key: 'greatvibes', name: 'Great Vibes', family: "'Great Vibes', cursive" },
+                                    { key: 'alexbrush', name: 'Alex Brush', family: "'Alex Brush', cursive" },
+                                    { key: 'cinzel', name: 'Cinzel', family: "'Cinzel', serif" },
+                                    { key: 'cormorant', name: 'Cormorant Garamond', family: "'Cormorant Garamond', serif" },
+                                    { key: 'merriweather', name: 'Merriweather', family: "'Merriweather', serif" },
+                                    { key: 'lora', name: 'Lora', family: "'Lora', serif" },
+                                    { key: 'parisienne', name: 'Parisienne', family: "'Parisienne', cursive" },
+                                    { key: 'sacramento', name: 'Sacramento', family: "'Sacramento', cursive" },
+                                    { key: 'dancing', name: 'Dancing Script', family: "'Dancing Script', cursive" },
+                                    { key: 'satisfy', name: 'Satisfy', family: "'Satisfy', cursive" },
+                                    { key: 'montserrat', name: 'Montserrat', family: "'Montserrat', sans-serif" },
+                                    { key: 'poppins', name: 'Poppins', family: "'Poppins', sans-serif" },
+                                    { key: 'amaticsc', name: 'Amatic SC', family: "'Amatic SC', cursive" },
+                                ].map(f => (
+                                    <div key={f.key} className="p-4 bg-white/5 rounded-lg border border-white/10">
+                                        <div className="text-sm text-gray-200 mb-2">{f.name}</div>
+                                        <h2 style={{ fontFamily: f.family }} className="text-white page-title font-bold mb-1">Carolina & Alexandre</h2>
+                                        <h4 style={{ fontFamily: f.family }} className="text-white/90 italic">06.06.2026 — Esperamos você</h4>
+                                        <p style={{ fontFamily: f.family }} className="text-gray-200 text-sm mt-3">Exemplo de texto — convide seus amigos e família para celebrar conosco.</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div> */}
+
                         <h2 className="text-white page-title font-serif font-bold mb-4">
                             Nossa História
                         </h2>
                         <p className="text-white text-lg italic">
-                            Uma história de amor, jogos e muito companheirismo
+                            Uma história de amor, diversão e muito companheirismo
                         </p>
                     </div>
 
                     <div className="card bg-gradient-to-br from-wedding-rose/10 via-wedding-olive/10 to-white">
                         <p className="text-gray-700 leading-relaxed text-lg mb-6">
                             Nossa história começou em julho de 2022, quando trocamos as primeiras mensagens e descobrimos
-                            que tínhamos muito mais em comum do que imaginávamos. Desde o primeiro encontro em agosto —
-                            em uma festa, já sabíamos que algo especial estava nascendo.
+                            que tínhamos muito mais em comum do que imaginávamos. Desde nosso primeiro encontro — em uma
+                            festa, já sabíamos que algo especial estava nascendo.
                         </p>
 
                         <p className="text-gray-700 leading-relaxed text-lg mb-6">
@@ -72,10 +101,9 @@ function OCasal() {
                         </p>
 
                         <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                            Em janeiro de 2025, Alexandre se ajoelhou e fez o pedido, e Carolina disse <strong>SIM</strong>
-                            com lágrimas nos olhos e um sorriso que iluminava mais que mil sóis. Meses depois, em outubro,
-                            trocamos alianças — a promessa física de que estaríamos juntos nos jogos de tabuleiro e nos
-                            dias difíceis, nas séries maratonadas e nos desafios da vida.
+                            Em janeiro de 2025, em meio a um momento inesquecível, Alexandre fez o pedido e Carolina disse
+                            <strong> SIM</strong>. Depois, trocamos alianças e reafirmamos a vontade de seguir juntos, nos
+                            momentos leves e nos desafios da vida.
                         </p>
 
                         <div className="mt-8 pt-6 border-t-2 border-wedding-olive/20">
@@ -113,8 +141,8 @@ function OCasal() {
                             title={showSecretNoiva ? "Easter egg encontrado! 🎉" : `Cliques: ${clicksNoiva}/5`}
                         >
                             <img
-                                src={showSecretNoiva 
-                                    ? `${import.meta.env.BASE_URL}images/noiva_secret.jpeg` 
+                                src={showSecretNoiva
+                                    ? `${import.meta.env.BASE_URL}images/noiva_secret.jpeg`
                                     : `${import.meta.env.BASE_URL}images/noiva.png`}
                                 alt="Carolina"
                                 className="w-full h-full object-cover"
@@ -140,8 +168,8 @@ function OCasal() {
                             title={showSecretNoivo ? "Easter egg encontrado! 🎉" : `Cliques: ${clicksNoivo}/5`}
                         >
                             <img
-                                src={showSecretNoivo 
-                                    ? `${import.meta.env.BASE_URL}images/noivo_secret.jpeg` 
+                                src={showSecretNoivo
+                                    ? `${import.meta.env.BASE_URL}images/noivo_secret.jpeg`
                                     : `${import.meta.env.BASE_URL}images/noivo.png`}
                                 alt="Alexandre"
                                 className="w-full h-full object-cover"
@@ -193,7 +221,7 @@ function OCasal() {
                         </div>
                         <div className="flex-grow pb-8">
                             <h3 className="font-bold text-wedding-olive mb-2">Primeiro Encontro</h3>
-                            <p className="text-gray-700">Carolina e Alexandre se conhecem pessoalmente em uma festa.</p>
+                            <p className="text-gray-700">Carolina e Alexandre se conhecem pessoalmente em uma festa universitária.</p>
                         </div>
                     </div>
 
@@ -318,31 +346,16 @@ function OCasal() {
                         </div>
                     </div>
 
-                    {/* Quebra-Cabeças */}
-                    <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-                        <div className="w-full md:w-1/3">
-                            <div className="aspect-square bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 rounded-lg overflow-hidden shadow-lg">
-                                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                                    <span className="text-sm text-center px-4">[Foto: Quebra-Cabeças]</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-full md:w-2/3 text-right">
-                            <h3 className="text-2xl font-bold text-wedding-olive mb-4">🧩 Quebra-Cabeças</h3>
-                            <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
-                                Montar quebra-cabeças juntos é uma de nossas atividades favoritas!
-                                É relaxante, desafiador e nos ensina paciência. Cada peça encaixada
-                                é como construir nossa vida: peça por peça, com amor e dedicação.
-                            </p>
-                        </div>
-                    </div>
-
                     {/* Filmes e Séries */}
-                    <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="flex flex-col md:flex-row-reverse items-center gap-8">
                         <div className="w-full md:w-1/3">
                             <div className="aspect-square bg-gradient-to-br from-wedding-olive/10 to-wedding-rose/10 rounded-lg overflow-hidden shadow-lg">
                                 <div className="w-full h-full flex items-center justify-center text-gray-400">
-                                    <span className="text-sm text-center px-4">[Foto: Filmes e Séries]</span>
+                                    <img
+                                        src={`${import.meta.env.BASE_URL}images/scooby.png`}
+                                        alt="Jogos de Tabuleiro"
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -371,7 +384,7 @@ function OCasal() {
                             </div>
                         </div>
                     </div>
-                    {/* Rpg */}
+                    {/* Rpg 
                     <div className="flex flex-col md:flex-row-reverse items-center gap-8">
                         <div className="w-full md:w-1/3">
                             <div className="aspect-square bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 rounded-lg overflow-hidden shadow-lg">
@@ -404,6 +417,7 @@ function OCasal() {
                             </div>
                         </div>
                     </div>
+                    */}
                 </div>
 
 
@@ -427,7 +441,11 @@ function OCasal() {
                         </p>
                     </Link>
 
-                    <Link to="/a-cerimonia" className="card text-center hover:scale-105 transition-transform duration-300">
+                    <Link 
+                        to="/a-cerimonia" 
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="card text-center hover:scale-105 transition-transform duration-300"
+                    >
                         <FiCalendar className="text-wedding-olive text-5xl mx-auto mb-4" />
                         <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
                             A Cerimônia
@@ -437,7 +455,11 @@ function OCasal() {
                         </p>
                     </Link>
 
-                    <Link to="/lista-presentes" className="card text-center hover:scale-105 transition-transform duration-300">
+                    <Link 
+                        to="/lista-presentes" 
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="card text-center hover:scale-105 transition-transform duration-300"
+                    >
                         <FiGift className="text-wedding-rose text-5xl mx-auto mb-4" />
                         <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
                             Lista de Presentes
@@ -449,7 +471,7 @@ function OCasal() {
                 </div>
             </section>
 
-            
+
         </div>
     )
 }

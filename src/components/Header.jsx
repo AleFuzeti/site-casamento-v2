@@ -27,8 +27,8 @@ function Header() {
           {/* Logo */}
           <Link to="/" onClick={handleNavClick} className="flex items-center space-x-2">
             <FiHeart className="text-wedding-rose text-2xl" />
-            <span className="text-2xl font-serif font-bold text-wedding-olive">
-              Nosso Casamento
+            <span className="text-2xl font-bold text-wedding-olive" style={{ fontFamily: "'Parisienne', cursive" }}>
+              Carolina e Alexandre
             </span>
           </Link>
 

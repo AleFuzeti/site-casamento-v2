@@ -9,7 +9,7 @@ function Footer() {
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex items-center space-x-2">
             <FiHeart className="text-wedding-rose text-xl" />
-            <span className="text-lg font-serif">Carolina & Alexandre</span>
+            <span className="text-lg" style={{ fontFamily: "'Parisienne', cursive" }}>Carolina & Alexandre</span>
             <FiHeart className="text-wedding-rose text-xl" />
           </div>
           
