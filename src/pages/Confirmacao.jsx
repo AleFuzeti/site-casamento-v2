@@ -150,7 +150,7 @@ function Confirmacao() {
       <section className="section-container pt-0 px-0" style={{ position: 'relative', zIndex: 2 }}>
         <div className="max-w-3xl mx-auto">
         
-          <p className="text-center text-gray-700 text-lg mb-4">
+          <p className="text-center mt-4 text-gray-700 text-lg mb-4">
             Digite seu código de convite para confirmar sua presença
           </p>
           <p className="text-center text-sm text-gray-500 mb-8">
@@ -316,6 +316,7 @@ function Confirmacao() {
                 <li>• Digite o código que está no seu convite</li>
                 <li>• Confirme sua presença até 01 de maio de 2026</li>
                 <li>• Você pode alterar sua confirmação até a data limite</li>
+                <li>• Em caso de erro, aguarde alguns minutos e tente novamente</li>
                 <li>• Em caso de dúvidas, entre em contato conosco</li>
               </ul>
             </div>

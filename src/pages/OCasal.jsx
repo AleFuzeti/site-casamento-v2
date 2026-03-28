@@ -103,8 +103,17 @@ function OCasal() {
             </section>
 
             {/* Reflexão Final */}
-            <section className="py-16 bg-gradient-to-r from-wedding-olive/5 via-wedding-rose/5 to-wedding-olive/5 border-t-2 border-b-2 border-wedding-olive/20">
-                <div className="max-w-3xl mx-auto px-8">
+            <section 
+              className="py-16 relative border-t-2 border-b-2 border-wedding-olive/20"
+              style={{
+                backgroundImage: `url(${import.meta.env.BASE_URL}images/pag1.jpg)`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <div className="absolute inset-0 "></div>
+              <div className="max-w-3xl mx-auto px-8 relative z-10">
                     <p className="text-center text-wedding-olive text-2xl font-serif mb-6">
                         ・ ✦ ・
                     </p>
@@ -185,7 +194,7 @@ function OCasal() {
                 style={{
                     backgroundImage: `url(${import.meta.env.BASE_URL}images/Carol&Alexandre.jpg)`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundPosition: 'center 64%',
                     backgroundAttachment: 'fixed'
                 }}
             >
@@ -429,7 +438,17 @@ function OCasal() {
             </section>
 
             {/* Quick Info Section */}
-            <section className="section-container bg-white/50">
+            <section 
+              className="w-full bg-white/50 relative py-12 px-16"
+              style={{
+                backgroundImage: `url(${import.meta.env.BASE_URL}images/pag1.jpg)`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center 69%',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <div className="absolute inset-0 "></div>
+              <div className="relative z-10 max-w-5xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-8">
                     <Link
                         to="/confirmacao"
@@ -473,6 +492,7 @@ function OCasal() {
                         </p>
                     </Link>
                 </div>
+              </div>
             </section>
 
 
