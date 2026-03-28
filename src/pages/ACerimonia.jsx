@@ -5,43 +5,45 @@ function ACerimonia() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-[#767745] text-white font-bold">
-        <div className="w-full mb-8">
-          <img 
-            src={`${import.meta.env.BASE_URL}images/header.png`} 
-            alt="Carolina & Alexandre" 
-            className="w-full h-auto"
-          />
-        </div>
-        
-        <div className="section-container p-4">
-          <h1 className="page-title text-white mb-0">A Cerimônia</h1>
+      <section
+        className="header-section relative min-h-96"
+        style={{
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/pre-169.jpg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          zIndex: 1
+        }}
+      >
+        <div className="absolute  flex flex-col items-center justify-center pt-32">
+          <h1 className="page-title text-white mb-0 hidden md:block" style={{ fontSize: '6.5rem', position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>A Cerimônia</h1>
+          <h1 className="page-title text-white mb-0 md:hidden" style={{ fontSize: '6.5rem', position: 'fixed', top: '80%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>Cerimônia</h1>
         </div>
       </section>
 
       {/* Data e Horário */}
-      <section className="section-container bg-[#767745]">
+      <section className="section-container bg-[#8da172]" style={{ position: 'relative', zIndex: 2 }}>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="card text-center">
             <FiCalendar className="text-wedding-olive text-5xl mx-auto mb-4" />
             <h2 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
               Data
             </h2>
-            <p className="text-3xl font-bold text-wedding-rose mb-2">
+            <p className="text-3xl font-bold text-wedding-olive mb-2">
               06 de Junho de 2026
             </p>
             <p className="text-gray-600">
-              Sexta-feira
+              Sábado
             </p>
           </div>
 
           <div className="card text-center">
-            <FiClock className="text-wedding-rose text-5xl mx-auto mb-4" />
+            <FiClock className="text-wedding-olive text-5xl mx-auto mb-4" />
             <h2 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
-              Horário
+              Horário de Recepção
             </h2>
-            <p className="text-3xl font-bold text-wedding-rose mb-2">
-              16h00
+            <p className="text-3xl font-bold text-wedding-olive mb-2">
+              15h00
             </p>
             <p className="text-gray-600">
               Início da Cerimônia
@@ -51,7 +53,7 @@ function ACerimonia() {
       </section>
 
       {/* Local da Cerimônia */}
-      <section className="section-container bg-white/50 pt-0">
+      <section className="section-container bg-white/50 pt-0" style={{ position: 'relative', zIndex: 2 }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center my-8">
             <FiMapPin className="text-wedding-olive text-5xl mx-auto mb-4" />
@@ -68,17 +70,16 @@ function ACerimonia() {
               <strong>Localização:</strong><br />
               R. Almeida Garret, 292 - Jardim Sao Jorge, Londrina - PR, 86047-000
             </p>
-            
+
             <p className="text-gray-700 mb-4" style={{ textAlign: "justify" }}>
               A cerimônia será realizada na Chácara da Dinda, localizada em Londrina-PR.
               O local possui uma linda área verde, ideal para a cerimônia ao ar livre.
             </p>
-            
+
             <p className="text-gray-700 mb-4" style={{ textAlign: "justify" }}>
-              Contamos com estacionamento próprio e segurança para garantir a tranquilidade de todos os convidados.
               Esperamos que todos aproveitem o espaço e a natureza ao nosso redor!
             </p>
-            
+
             {/* Google Maps */}
             <div className="w-full rounded-lg overflow-hidden mb-4">
               <iframe
@@ -92,9 +93,9 @@ function ACerimonia() {
               ></iframe>
             </div>
 
-            <a 
-              href="https://www.google.com/maps/search/Ch%C3%A1cara+da+Dinda+Londrina+PR" 
-              target="_blank" 
+            <a
+              href="https://www.google.com/maps/search/Ch%C3%A1cara+da+Dinda+Londrina+PR"
+              target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-block"
             >
@@ -105,10 +106,21 @@ function ACerimonia() {
       </section>
 
       {/* Programação do Dia */}
-      <section className="section-container bg-[#767745] ">
-        <div className="max-w-4xl mx-auto">
+      <section
+        className="section-container bg-[#8da172] relative"
+        style={{
+          position: 'relative',
+          zIndex: 2,
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/pre-90.jpg)`,
+          backgroundSize: '118%',
+          backgroundPosition: '-28% 72%',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-white/80"></div>
+        <div className="relative z-10 ml-8" style={{ maxWidth: '550px' }}>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-serif font-bold text-white mb-4">
+            <h2 className="text-3xl font-serif font-bold text-wedding-olive mb-4">
               Programação do Dia
             </h2>
           </div>
@@ -122,7 +134,7 @@ function ACerimonia() {
                   <span className="text-gray-700 ml-2">Recepção dos convidados</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
                 <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
@@ -130,7 +142,7 @@ function ACerimonia() {
                   <span className="text-gray-700 ml-2">Início da cerimônia</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
                 <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
@@ -138,7 +150,7 @@ function ACerimonia() {
                   <span className="text-gray-700 ml-2">Fotos com os noivos</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
                 <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
@@ -146,7 +158,7 @@ function ACerimonia() {
                   <span className="text-gray-700 ml-2">Início do jantar</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
                 <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
@@ -154,7 +166,7 @@ function ACerimonia() {
                   <span className="text-gray-700 ml-2">Corte do Bolo</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 p-3 bg-wedding-olive/5 rounded-lg">
                 <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
@@ -168,7 +180,7 @@ function ACerimonia() {
       </section>
 
       {/* Informações Adicionais */}
-      <section className="section-container bg-white/50">
+      <section className="section-container bg-white/50" style={{ position: 'relative', zIndex: 2 }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <FiInfo className="text-wedding-rose text-5xl mx-auto mb-4" />
@@ -219,18 +231,7 @@ function ACerimonia() {
                       <td className="border border-gray-300 p-3 font-semibold">Pizzas Doces</td>
                       <td className="border border-gray-300 p-3">Banana com Canela, Brigadeiro, Romeu e Julieta, Brasileirinha, Chocolate Branco com Coco Queimado, Sensação</td>
                     </tr>
-                    <tr className="bg-wedding-olive/5">
-                      <td className="border border-gray-300 p-3 font-semibold">Bebidas</td>
-                      <td className="border border-gray-300 p-3">Cerveja, Quentão, Energético, Água com e sem gás, Coca-Cola, Guaraná</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-3 font-semibold">Drinks</td>
-                      <td className="border border-gray-300 p-3">
-                        <strong>Moreco:</strong> Essência de morango com vodka/água com gás<br />
-                        <strong>Drink da Carol:</strong> Maçã verde com vodka/água com gás<br />
-                        <strong>Drink do Ale:</strong> Essência de limão e hortelã com vodka/água com gás
-                      </td>
-                    </tr>
+                   
                   </tbody>
                 </table>
               </div>
@@ -243,7 +244,9 @@ function ACerimonia() {
       </section>
 
       {/* Contagem Regressiva até o casamento */}
-      <Countdown />
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        <Countdown />
+      </div>
     </div>
   )
 }

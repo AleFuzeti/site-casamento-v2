@@ -3,7 +3,7 @@
 ## 📸 Como adicionar suas fotos:
 
 ### Imagem do Header (Logo)
-- **Nome do arquivo:** `header.png`
+- **Nome do arquivo:** `header.jpg`
 - **Descrição:** Logo ou nome artístico "Carolina & Alexandre"
 - **Tamanho recomendado:** Largura máxima de 800px, altura máxima de 200px
 - **Formato:** PNG com fundo transparente (recomendado) ou JPG
@@ -23,7 +23,7 @@
 ```
 public/
 └── images/
-    ├── header.png          ← ADICIONE ESTA IMAGEM
+    ├── header.jpg          ← ADICIONE ESTA IMAGEM
     ├── noiva.jpeg          ← Foto da Carolina
     ├── noivo.jpeg          ← Foto do Alexandre
     ├── casal-1.jpg         ← (Opcional) Fotos extras
@@ -31,4 +31,4 @@ public/
 ```
 
 ## ⚠️ IMPORTANTE:
-Coloque o arquivo **header.png** nesta pasta para que apareça no site!
+Coloque o arquivo **header.jpg** nesta pasta para que apareça no site!

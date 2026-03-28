@@ -27,52 +27,25 @@ function OCasal() {
     return (
         <div className="min-h-screen">
             {/* Header Section */}
-            <section className="bg-[#767745] text-white font-bold">
-                <div className="w-full mb-8">
-                    <img
-                        src={`${import.meta.env.BASE_URL}images/header.png`}
-                        alt="Carolina & Alexandre"
-                        className="w-full h-auto"
-                    />
+            <section className="header-section">
+                <div className="overlay bg-black/25"></div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <h1 className="text-white text-5xl md:text-8xl italic tracking-wide text-center px-4">
+                        Carolina<br className="md:hidden" /> e<br className="md:hidden" /> Alexandre
+                    </h1>
+                    <p className="text-white text-lg md:text-3xl font-light tracking-wide text-center px-4">
+                        06.06.2026
+                    </p>
                 </div>
-
             </section>
 
-            {/* Nossa História */}
-            <section className="bg-[#767745] section-container" style={{ textAlign: "justify" }}>
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-4">
-                        {/* Font tests: many examples to preview wedding fonts */}
-                        {/* <div className="mb-8">
-                            <h3 className="text-white text-xl font-semibold mb-4">Testes Tipográficos</h3>
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {[
-                                    { key: 'playfair', name: 'Playfair Display', family: "'Playfair Display', serif" },
-                                    { key: 'greatvibes', name: 'Great Vibes', family: "'Great Vibes', cursive" },
-                                    { key: 'alexbrush', name: 'Alex Brush', family: "'Alex Brush', cursive" },
-                                    { key: 'cinzel', name: 'Cinzel', family: "'Cinzel', serif" },
-                                    { key: 'cormorant', name: 'Cormorant Garamond', family: "'Cormorant Garamond', serif" },
-                                    { key: 'merriweather', name: 'Merriweather', family: "'Merriweather', serif" },
-                                    { key: 'lora', name: 'Lora', family: "'Lora', serif" },
-                                    { key: 'parisienne', name: 'Parisienne', family: "'Parisienne', cursive" },
-                                    { key: 'sacramento', name: 'Sacramento', family: "'Sacramento', cursive" },
-                                    { key: 'dancing', name: 'Dancing Script', family: "'Dancing Script', cursive" },
-                                    { key: 'satisfy', name: 'Satisfy', family: "'Satisfy', cursive" },
-                                    { key: 'montserrat', name: 'Montserrat', family: "'Montserrat', sans-serif" },
-                                    { key: 'poppins', name: 'Poppins', family: "'Poppins', sans-serif" },
-                                    { key: 'amaticsc', name: 'Amatic SC', family: "'Amatic SC', cursive" },
-                                ].map(f => (
-                                    <div key={f.key} className="p-4 bg-white/5 rounded-lg border border-white/10">
-                                        <div className="text-sm text-gray-200 mb-2">{f.name}</div>
-                                        <h2 style={{ fontFamily: f.family }} className="text-white page-title font-bold mb-1">Carolina & Alexandre</h2>
-                                        <h4 style={{ fontFamily: f.family }} className="text-white/90 italic">06.06.2026 — Esperamos você</h4>
-                                        <p style={{ fontFamily: f.family }} className="text-gray-200 text-sm mt-3">Exemplo de texto — convide seus amigos e família para celebrar conosco.</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div> */}
 
-                        <h2 className="text-white page-title font-serif font-bold mb-4">
+
+            {/* Nossa História */}
+            <section className="pt-8 bg-[#8da172] w-full px-16" style={{ textAlign: "justify" }}>
+                <div className="w-full pb-4">
+                    <div className="text-center mb-4 mx-0">
+                        <h2 className="text-white mx-0 page-title font-serif font-bold mb-4">
                             Nossa História
                         </h2>
                         <p className="text-white text-lg italic">
@@ -80,59 +53,76 @@ function OCasal() {
                         </p>
                     </div>
 
-                    <div className="card bg-gradient-to-br from-wedding-rose/10 via-wedding-olive/10 to-white">
-                        <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                            Nossa história começou em julho de 2022, quando trocamos as primeiras mensagens e descobrimos
-                            que tínhamos muito mais em comum do que imaginávamos. Desde nosso primeiro encontro — em uma
-                            festa, já sabíamos que algo especial estava nascendo.
-                        </p>
+                    <div className="card bg-gradient-to-br from-wedding-rose/10 via-wedding-olive/10 to-white mb-8">
+                        <div className="grid md:grid-cols-[2fr,3fr] gap-8 items-start">
+                            {/* Foto Retrato */}
 
-                        <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                            Em setembro do mesmo ano, oficializamos o namoro e começamos a construir nossa vida juntos,
-                            peça por peça, como um quebra-cabeça. Nossas noites se encheram de maratonas de séries,
-                            jogos de tabuleiro que duravam horas, e conversas infinitas sobre tudo e nada ao mesmo tempo.
-                        </p>
+                            <div className="w-full">
+                                <div className="aspect-[3/4] bg-gradient-to-br from-wedding-olive/10 to-wedding-rose/10 rounded-lg overflow-hidden shadow-lg">
+                                    <img
+                                        src={`${import.meta.env.BASE_URL}images/casal.jpg`}
+                                        alt="Carolina e Alexandre"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
 
-                        <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                            Carolina, a psicóloga pisciana extremamente planejada, adora cozinhar, cultivar plantas e
-                            pintar aquarelas. Alexandre, o programador criativo nascido em outubro, é apaixonado por
-                            música, desenho e RPG. Somos diferentes, mas nos complementamos perfeitamente — ela com seu
-                            <strong> companheirismo</strong> incondicional, ele com seu <strong>jeito de ser</strong> único.
-                        </p>
+                            {/* Texto */}
+                            <div>
+                                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                                    Nossa história começou em julho de 2022, quando trocamos as primeiras mensagens e descobrimos
+                                    que tínhamos muito mais em comum do que imaginávamos. Desde nosso primeiro encontro, já sabíamos que algo especial estava nascendo.
+                                </p>
 
-                        <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                            Em janeiro de 2025, em meio a um momento inesquecível, Alexandre fez o pedido e Carolina disse
-                            <strong> SIM</strong>. Depois, trocamos alianças e reafirmamos a vontade de seguir juntos, nos
-                            momentos leves e nos desafios da vida.
-                        </p>
+                                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                                    Em setembro do mesmo ano, oficializamos o namoro e começamos a construir nossa vida juntos,
+                                    peça por peça, como um quebra-cabeça. Nossas noites se encheram de risadas,
+                                    jogos de tabuleiro e conversas infinitas sobre objetivos de vida e sonhos.
+                                </p>
 
-                        <div className="mt-8 pt-6 border-t-2 border-wedding-olive/20">
-                            <p className="text-gray-700 leading-relaxed text-lg mb-4">
-                                E assim chegamos ao <strong className="text-wedding-olive text-xl">6 de junho de 2026</strong> —
-                                o dia em que uniremos nossas vidas oficialmente, celebrando com todos que amamos.
-                                Será um dia de emoção, alegria, boa comida e muitas histórias para contar.
-                            </p>
+                                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                                    Carolina, uma psicóloga extremamente organizada, que adora cozinhar, cultivar plantas e
+                                    pintar aquarelas. Alexandre, um programador criativo, apaixonado por tecnologia, basquete e RPG.
+                                    Juntos, somos uma combinação perfeita de planejamento e espontaneidade, diversão e seriedade, amor e companheirismo.
+                                </p>
 
-                            <p className="text-center text-wedding-olive text-xl font-serif mt-6 mb-4">
-                                ・ ✦ ・
-                            </p>
+                                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                                    Em janeiro de 2025, rodeado por tubarões, Alexandre fez o pedido e Carolina disse <strong> SIM</strong>.
+                                    A partir daí, os dois se formaram, mudaram para São Paulo, e planejaram o evento que marcará suas vidas para sempre.
+                                </p>
 
-                            <p className="text-gray-700 leading-relaxed italic text-lg">
-                                Essa é apenas a primeira página de um livro que promete ser longo, cheio de
-                                aventuras, jogos, séries, plantinhas, desenhos e, principalmente, muito amor.
-                            </p>
-
-                            <p className="text-center text-wedding-olive text-xl font-bold mt-6">
-                                A história continua... para sempre. ❤️
-                            </p>
+                                <p className="text-gray-700 leading-relaxed text-lg mb-4">
+                                    E assim chegamos ao <strong className="text-wedding-olive text-xl">6 de junho de 2026</strong>:
+                                    o dia em que uniremos nossas vidas oficialmente, celebrando com todos que amamos.
+                                    Será um dia de emoção, alegria, boa comida e muitas histórias para contar.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            {/* Reflexão Final */}
+            <section className="py-16 bg-gradient-to-r from-wedding-olive/5 via-wedding-rose/5 to-wedding-olive/5 border-t-2 border-b-2 border-wedding-olive/20">
+                <div className="max-w-3xl mx-auto px-8">
+                    <p className="text-center text-wedding-olive text-2xl font-serif mb-6">
+                        ・ ✦ ・
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed italic text-lg text-center mb-8">
+                        Essa é apenas a primeira página de um livro que promete ser longo, cheio de
+                        aventuras, jogos, séries, plantinhas, desenhos e, principalmente, muito amor.
+                    </p>
+
+                    <p className="text-center text-wedding-olive text-2xl font-bold">
+                        A história continua... para sempre. ❤️
+                    </p>
+                </div>
+            </section>
+
             {/* Os Noivos */}
-            <section className="section-container bg-[#767745]">
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <section className="px-16 mx-0 py-12 w-full bg-[#8da172]">
+                <div className="grid md:grid-cols-2 w-full gap-8 max-w-5xl mx-auto">
                     {/* Noiva */}
                     <div className="card text-center">
                         <div
@@ -143,7 +133,7 @@ function OCasal() {
                             <img
                                 src={showSecretNoiva
                                     ? `${import.meta.env.BASE_URL}images/noiva_secret.jpeg`
-                                    : `${import.meta.env.BASE_URL}images/noiva.png`}
+                                    : `${import.meta.env.BASE_URL}images/noiva.jpg`}
                                 alt="Carolina"
                                 className="w-full h-full object-cover"
                             />
@@ -152,11 +142,10 @@ function OCasal() {
                             Carolina
                         </h3>
                         <p className="text-gray-600 mb-4">A Noiva</p>
-                        <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
-                            Nascida em 06 de março de 2001, a noiva pisciana é formada em Psicologia pela Universidade Estadual de Londrina, atuando em clínica particular, avaliação psicológica e orientação profissional.
-                        </p>
                         <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
-                            Extremamente planejada e animada, a noiva adora cozinhar, cultivar plantas, pintar aquarelas e cantar. O que Alexandre mais admira na Carol é seu <strong>companheirismo</strong>.
+                            Nascida em 06 de março de 2001, a noiva pisciana é formada em Psicologia pela UEL, atuando em clínica particular e orientação profissional. <br/>
+                            Extremamente planejada e animada, a noiva adora cozinhar, cultivar plantas, pintar aquarelas e cantar. <br/>
+                            O que Alexandre mais admira na Carol é seu <strong>companheirismo, sinceridade e inteligência</strong>.
                         </p>
                     </div>
 
@@ -170,7 +159,7 @@ function OCasal() {
                             <img
                                 src={showSecretNoivo
                                     ? `${import.meta.env.BASE_URL}images/noivo_secret.jpeg`
-                                    : `${import.meta.env.BASE_URL}images/noivo.png`}
+                                    : `${import.meta.env.BASE_URL}images/noivo.jpg`}
                                 alt="Alexandre"
                                 className="w-full h-full object-cover"
                             />
@@ -179,123 +168,138 @@ function OCasal() {
                             Alexandre
                         </h3>
                         <p className="text-gray-600 mb-4">O Noivo</p>
-                        <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
-                            Nascido em 27 de outubro de 2003, o noivo é formado em Computação na UEL. Atualmente trabalha como desenvolvedor.
-                        </p>
                         <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
-                            O noivo adora tocar música, desenhar, ler e também gosta de jogar e mestrar RPG. O que Carolina mais admira no Ale é seu <strong>jeito de ser</strong>.
+                            Nascido em 27 de outubro de 2003, o noivo é formado em Ciencia da Computação pela UEL. 
+                            Atualmente trabalha como Digital Commerce Specialist em São Paulo. <br/>
+            
+                            O noivo adora ouvir música, ler ficção e também gosta de jogar e mestrar RPG. <br/>
+                            O que Carolina mais admira no Ale é sua <strong>bondade, espontaneidade e companheirismo</strong>.
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* Timeline */}
-            <section className="section-container bg-white/50">
-                <h2 className="text-3xl font-serif font-bold text-center text-wedding-olive mb-12">
-                    Nossa Linha do Tempo
-                </h2>
-                <div className="max-w-3xl mx-auto space-y-8">
-                    {/* Timeline Item 1 - Primeiro Contato */}
-                    <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-32 text-right">
-                            <span className="text-wedding-olive font-bold">10 Jul 2022</span>
-                        </div>
-                        <div className="flex-shrink-0 w-4 flex flex-col items-center">
-                            <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
-                            <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
-                        </div>
-                        <div className="flex-grow pb-8">
-                            <h3 className="font-bold text-wedding-olive mb-2">Primeiro Contato</h3>
-                            <p className="text-gray-700">Carolina e Alexandre trocam as primeiras mensagens.</p>
-                        </div>
-                    </div>
+            <section
+                className="section-container relative"
+                style={{
+                    backgroundImage: `url(${import.meta.env.BASE_URL}images/Carol&Alexandre.jpg)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundAttachment: 'fixed'
+                }}
+            >
+                {/* Overlay para melhorar legibilidade */}
+                <div className="absolute inset-0 bg-white/80"></div>
 
-                    {/* Timeline Item 2 - Conheceu Pessoalmente */}
-                    <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-32 text-right">
-                            <span className="text-wedding-olive font-bold">06 Ago 2022</span>
+                {/* Conteúdo */}
+                <div className="relative z-10">
+                    <h2 className="text-3xl font-serif font-bold text-center text-wedding-olive mb-12">
+                        Nossa Linha do Tempo
+                    </h2>
+                    <div className="max-w-3xl mx-auto space-y-8">
+                        {/* Timeline Item 1 - Primeiro Contato */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">10 Jul 2022</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                                <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
+                            </div>
+                            <div className="flex-grow pb-8">
+                                <h3 className="font-bold text-wedding-olive mb-2">Primeiro Contato</h3>
+                                <p className="text-gray-700">Carolina e Alexandre trocam as primeiras mensagens.</p>
+                            </div>
                         </div>
-                        <div className="flex-shrink-0 w-4 flex flex-col items-center">
-                            <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
-                            <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
-                        </div>
-                        <div className="flex-grow pb-8">
-                            <h3 className="font-bold text-wedding-olive mb-2">Primeiro Encontro</h3>
-                            <p className="text-gray-700">Carolina e Alexandre se conhecem pessoalmente em uma festa universitária.</p>
-                        </div>
-                    </div>
 
-                    {/* Timeline Item 3 - Namoro */}
-                    <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-32 text-right">
-                            <span className="text-wedding-olive font-bold">04 Set 2022</span>
+                        {/* Timeline Item 2 - Conheceu Pessoalmente */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">06 Ago 2022</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                                <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
+                            </div>
+                            <div className="flex-grow pb-8">
+                                <h3 className="font-bold text-wedding-olive mb-2">Primeiro Encontro</h3>
+                                <p className="text-gray-700">Carolina e Alexandre se conhecem pessoalmente em uma festa universitária.</p>
+                            </div>
                         </div>
-                        <div className="flex-shrink-0 w-4 flex flex-col items-center">
-                            <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
-                            <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
-                        </div>
-                        <div className="flex-grow pb-8">
-                            <h3 className="font-bold text-wedding-olive mb-2">Início do Namoro</h3>
-                            <p className="text-gray-700">Juntos! Cada dia que passava eles percebiam que o que mais queriam era ficar juntos.</p>
-                        </div>
-                    </div>
 
-                    {/* Timeline Item 4 - Primeira Viagem */}
-                    <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-32 text-right">
-                            <span className="text-wedding-olive font-bold">10 Jun 2024</span>
+                        {/* Timeline Item 3 - Namoro */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">04 Set 2022</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                                <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
+                            </div>
+                            <div className="flex-grow pb-8">
+                                <h3 className="font-bold text-wedding-olive mb-2">Início do Namoro</h3>
+                                <p className="text-gray-700">Juntos! Cada dia que passava eles percebiam que o que mais queriam era ficar juntos.</p>
+                            </div>
                         </div>
-                        <div className="flex-shrink-0 w-4 flex flex-col items-center">
-                            <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
-                            <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
-                        </div>
-                        <div className="flex-grow pb-8">
-                            <h3 className="font-bold text-wedding-olive mb-2">Primeira Viagem de Carro</h3>
-                            <p className="text-gray-700">Aventura até Foz do Iguaçu! Uma viagem inesquecível que fortaleceu ainda mais o laço do casal.</p>
-                        </div>
-                    </div>
 
-                    {/* Timeline Item 5 - Noivado */}
-                    <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-32 text-right">
-                            <span className="text-wedding-olive font-bold">06 Jan 2025</span>
+                        {/* Timeline Item 4 - Primeira Viagem */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">10 Jun 2024</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                                <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
+                            </div>
+                            <div className="flex-grow pb-8">
+                                <h3 className="font-bold text-wedding-olive mb-2">Primeira Viagem de Carro</h3>
+                                <p className="text-gray-700">Aventura até Foz do Iguaçu! Uma viagem inesquecível que fortaleceu ainda mais o laço do casal.</p>
+                            </div>
                         </div>
-                        <div className="flex-shrink-0 w-4 flex flex-col items-center">
-                            <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
-                            <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
-                        </div>
-                        <div className="flex-grow pb-8">
-                            <h3 className="font-bold text-wedding-olive mb-2">O Pedido de Noivado</h3>
-                            <p className="text-gray-700">Alexandre pediu Carolina em casamento! Um momento mágico e emocionante.</p>
-                        </div>
-                    </div>
 
-                    {/* Timeline Item 6 - Troca de Alianças */}
-                    <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-32 text-right">
-                            <span className="text-wedding-olive font-bold">10 Jan 2025</span>
+                        {/* Timeline Item 5 - Noivado */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">06 Jan 2025</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                                <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
+                            </div>
+                            <div className="flex-grow pb-8">
+                                <h3 className="font-bold text-wedding-olive mb-2">O Pedido de Noivado</h3>
+                                <p className="text-gray-700">Alexandre pediu Carolina em casamento! Um momento mágico e emocionante.</p>
+                            </div>
                         </div>
-                        <div className="flex-shrink-0 w-4 flex flex-col items-center">
-                            <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
-                            <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
-                        </div>
-                        <div className="flex-grow pb-8">
-                            <h3 className="font-bold text-wedding-olive mb-2">Troca de Alianças</h3>
-                            <p className="text-gray-700">Um compromisso simbólico e especial, selando a promessa de um futuro juntos.</p>
-                        </div>
-                    </div>
 
-                    {/* Timeline Item 7 - Casamento */}
-                    <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-32 text-right">
-                            <span className="text-wedding-olive font-bold">06 Jun 2026</span>
+                        {/* Timeline Item 6 - Troca de Alianças */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">10 Jan 2025</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                                <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
+                            </div>
+                            <div className="flex-grow pb-8">
+                                <h3 className="font-bold text-wedding-olive mb-2">Troca de Alianças</h3>
+                                <p className="text-gray-700">Um compromisso simbólico e especial, selando a promessa de um futuro juntos.</p>
+                            </div>
                         </div>
-                        <div className="flex-shrink-0 w-4 flex flex-col items-center">
-                            <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
-                        </div>
-                        <div className="flex-grow">
-                            <h3 className="font-bold text-wedding-olive mb-2">O Grande Dia</h3>
-                            <p className="text-gray-700">Nosso casamento! O início de uma nova jornada, celebrando nosso amor com todos que amamos.</p>
+
+                        {/* Timeline Item 7 - Casamento */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">06 Jun 2026</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                            </div>
+                            <div className="flex-grow">
+                                <h3 className="font-bold text-wedding-olive mb-2">O Grande Dia</h3>
+                                <p className="text-gray-700">Nosso casamento! O início de uma nova jornada, celebrando nosso amor com todos que amamos.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -441,8 +445,8 @@ function OCasal() {
                         </p>
                     </Link>
 
-                    <Link 
-                        to="/a-cerimonia" 
+                    <Link
+                        to="/a-cerimonia"
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="card text-center hover:scale-105 transition-transform duration-300"
                     >
@@ -455,8 +459,8 @@ function OCasal() {
                         </p>
                     </Link>
 
-                    <Link 
-                        to="/lista-presentes" 
+                    <Link
+                        to="/lista-presentes"
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="card text-center hover:scale-105 transition-transform duration-300"
                     >

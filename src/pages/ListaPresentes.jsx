@@ -178,14 +178,14 @@ function ListaPresentes() {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <section className="bg-[#767745] text-white font-bold">
-        <div className="w-full mb-8">
+      <section className="bg-[#8da172] text-white font-bold">
+        {/* <div className="w-full mb-8">
           <img
-            src={`${import.meta.env.BASE_URL}images/header.png`}
+            src={`${import.meta.env.BASE_URL}images/header.jpg`}
             alt="Carolina & Alexandre"
             className="w-full h-auto"
           />
-        </div>
+        </div> */}
 
         <div className="section-container flex justify-center" style={{ paddingBottom: 0 }}>
           <h1 className="page-title text-white mb-0 flex items-center gap-4">
@@ -197,7 +197,7 @@ function ListaPresentes() {
       </section>
 
       {/* Mensagem dos Noivos */}
-      <section className="bg-[#767745] section-container">
+      <section className="bg-[#8da172] section-container">
         <div className="max-w-4xl mx-auto">
           <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20" style={{ textAlign: "justify" }}>
             <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>

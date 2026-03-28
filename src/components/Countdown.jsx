@@ -29,10 +29,20 @@ function Countdown() {
   if (!timeLeft) return null
 
   return (
-    <section className="section-container bg-[#767745]">
-      <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-white mb-12">
-        Contagem Regressiva
-      </h2>
+    <section 
+      className="section-container bg-[#8da172] relative"
+      style={{
+        backgroundImage: `url(${import.meta.env.BASE_URL}images/pre-218.jpg)`,
+        backgroundSize: 'cover',
+        minHeight: '500px',
+        backgroundPosition: '-0 75%',
+      }}
+    >
+      <div className="absolute inset-0 bg-wedding-olive/70"></div>
+      <div className="relative z-10">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-white mb-12">
+          Contagem Regressiva
+        </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
         {Object.entries(timeLeft).map(([unit, value]) => (
           <div key={unit} className="card text-center">
@@ -44,6 +54,7 @@ function Countdown() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   )
