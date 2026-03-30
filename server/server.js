@@ -1,7 +1,11 @@
-const express = require('express');
-const fs = require('fs');
-const cors = require('cors');
-const path = require('path');
+import express from 'express';
+import fs from 'fs';
+import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors());
@@ -112,6 +116,58 @@ app.get('/api/convidados/:codigo', (req, res) => {
   }
 });
 
+// PROXY: Google Sheets - GET (listar e buscar)
+app.get('/api/sheets-proxy', async (req, res) => {
+  try {
+    const { action, codigo } = req.query;
+    const googleSheetUrl = `https://script.google.com/macros/s/AKfycbz5nCQe6yOpIch6OzwSk8295rK_HGj_BIs8xx5DIubt4MhupTshoo4QfK_-UJYGCv39/exec?action=${action}${codigo ? `&codigo=${encodeURIComponent(codigo)}` : ''}`;
+    
+    console.log('🔄 PROXY GET - Requisição:', { action, codigo });
+    console.log('📍 URL completa:', googleSheetUrl);
+    
+    const response = await fetch(googleSheetUrl);
+    console.log('📊 Status da resposta:', response.status, response.statusText);
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error(`❌ Google Sheets retornou status ${response.status}:`, errorText);
+      return res.status(response.status).json({ erro: `Google Sheets retornou: ${response.status}`, detalhes: errorText });
+    }
+    
+    const data = await response.json();
+    console.log('✅ PROXY GET - Dados recebidos:', data);
+    res.json(data);
+  } catch (error) {
+    console.error('❌ PROXY GET - Erro:', error.message);
+    res.status(500).json({ erro: error.message });
+  }
+});
+
+// PROXY: Google Sheets - POST (confirmar presença)
+app.post('/api/sheets-proxy', async (req, res) => {
+  try {
+    console.log('🔄 PROXY POST - Enviando:', req.body);
+    
+    const response = await fetch('https://script.google.com/macros/s/AKfycbz5nCQe6yOpIch6OzwSk8295rK_HGj_BIs8xx5DIubt4MhupTshoo4QfK_-UJYGCv39/exec', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body)
+    });
+    
+    if (!response.ok) {
+      console.error(`❌ Google Sheets retornou status ${response.status}`);
+      return res.status(response.status).json({ erro: `Google Sheets retornou: ${response.status}` });
+    }
+    
+    const data = await response.json();
+    console.log('✅ PROXY POST - Resposta recebida:', data);
+    res.json(data);
+  } catch (error) {
+    console.error('❌ PROXY POST - Erro:', error.message);
+    res.status(500).json({ erro: error.message });
+  }
+});
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`\n🚀 Servidor backend rodando na porta ${PORT}`);
@@ -119,5 +175,7 @@ app.listen(PORT, () => {
   console.log(`\n📋 Endpoints disponíveis:`);
   console.log(`   GET  /api/convidados - Lista todos os convidados`);
   console.log(`   GET  /api/convidados/:codigo - Busca por código`);
-  console.log(`   POST /api/confirmar - Confirma presença\n`);
+  console.log(`   POST /api/confirmar - Confirma presença`);
+  console.log(`   GET  /api/sheets-proxy - Proxy para Google Sheets (GET)`);
+  console.log(`   POST /api/sheets-proxy - Proxy para Google Sheets (POST)\n`);
 });

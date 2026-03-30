@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { convidadosService } from '../services/convidadosService'
 
-const DATA_LIMITE = new Date('2026-05-01T23:59:59')
+const DATA_LIMITE = new Date('2026-05-04T23:59:59')
 
 function Confirmacao() {
   const [codigo, setCodigo] = useState('')
@@ -17,10 +17,15 @@ function Confirmacao() {
   // Função para carregar convidados da API
   const carregarConvidados = async () => {
     try {
+      console.log('🔄 Iniciando carregamento de convidados...')
       const dados = await convidadosService.listarConvidados()
+      console.log('📦 Resposta do serviço:', dados)
+      
       if (dados.success) {
         setConvidados(dados.convidados)
         console.log('☁️ Dados carregados da nuvem:', dados.convidados.length, 'convidados')
+      } else {
+        console.error('❌ Falha no carregamento - nenhum convidado retornado')
       }
     } catch (error) {
       console.error('❌ Erro ao carregar convidados:', error)
@@ -28,6 +33,7 @@ function Confirmacao() {
   }
 
   useEffect(() => {
+    console.log('⏳ useEffect disparado - montando componente')
     // Carregar dados da API/nuvem
     carregarConvidados()
     setDataLimitePassou(new Date() > DATA_LIMITE)
@@ -35,7 +41,8 @@ function Confirmacao() {
 
   const buscarConvidado = () => {
     console.log('🔍 Buscando código:', codigo)
-    console.log('📋 Total de convidados:', convidados.length)
+    console.log('📋 Total de convidados carregados:', convidados.length)
+    console.log('📋 Dados dos convidados:', convidados)
     
     if (codigo.trim().toUpperCase() === 'M0M0') {
       setRelatorio(convidados)

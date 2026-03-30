@@ -201,12 +201,16 @@ function ACerimonia() {
                 <FiClock className="text-wedding-olive text-2xl flex-shrink-0" />
                 <div>
                   <span className="font-bold text-wedding-olive">22h00</span>
-                  <span className="text-gray-700 ml-2">Final da festa</span>
+                  <span className="text-gray-700 ml-2">Final do Jantar</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="gap-2  p-0 section-container bg-white/50 flex flex-col text-left md:text-justify mx-4" >
+        <p className="z-10 text-wedding-rose text-2xl">Após o encerramento do jantar, para aqueles que desejarem continuar celebrando, disponibilizaremos o acesso ao Vitrola Bar. O consumo no local será por adesão.</p>
       </section>
 
       {/* Informações Adicionais */}
@@ -231,8 +235,8 @@ function ACerimonia() {
                   <p className="text-gray-700 text-center font-medium">
                     O traje é <strong>esporte fino</strong>.
                     <br />
-                     Esperamos que todos estejam <strong>confortáveis e elegantes</strong> para celebrar conosco!
-                      Evite roupas muito informais.
+                    Esperamos que todos estejam <strong>confortáveis e elegantes</strong> para celebrar conosco!
+                    Evite roupas muito informais.
                   </p>
 
                 </div>
@@ -281,8 +285,8 @@ function ACerimonia() {
                       key={index}
                       onClick={() => setCurrentSlide(index)}
                       className={`h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                          ? 'bg-wedding-olive w-8'
-                          : 'bg-wedding-olive/30 w-3 hover:bg-wedding-olive/50'
+                        ? 'bg-wedding-olive w-8'
+                        : 'bg-wedding-olive/30 w-3 hover:bg-wedding-olive/50'
                         }`}
                     />
                   ))}
