@@ -39,8 +39,6 @@ function OCasal() {
                 </div>
             </section>
 
-
-
             {/* Nossa História */}
             <section className="pt-8 bg-[#8da172] w-full px-4 md:px-16" style={{ textAlign: "justify" }}>
                 <div className="w-full pb-4">
@@ -68,7 +66,7 @@ function OCasal() {
                             </div>
 
                             {/* Texto */}
-                            <div>
+                            <div className='text-left md:text-justify'>
                                 <p className="text-gray-700 leading-relaxed text-lg mb-6">
                                     Nossa história começou em julho de 2022, quando trocamos as primeiras mensagens e descobrimos
                                     que tínhamos muito mais em comum do que imaginávamos. Desde nosso primeiro encontro, já sabíamos que algo especial estava nascendo.
@@ -151,7 +149,7 @@ function OCasal() {
                             Carolina
                         </h3>
                         <p className="text-gray-600 mb-4">A Noiva</p>
-                        <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
+                        <p className="text-left md:text-justify text-gray-700 leading-relaxed">
                             Nascida em 06 de março de 2001, a noiva pisciana é formada em Psicologia pela UEL, atuando em clínica particular e orientação profissional. <br />
                             Extremamente planejada e animada, a noiva adora cozinhar, cultivar plantas, pintar aquarelas e cantar. <br />
                             O que Alexandre mais admira na Carol é seu <strong>companheirismo, sinceridade e inteligência</strong>.
@@ -177,7 +175,7 @@ function OCasal() {
                             Alexandre
                         </h3>
                         <p className="text-gray-600 mb-4">O Noivo</p>
-                        <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
+                        <p className="text-left md:text-justify text-gray-700 leading-relaxed">
                             Nascido em 27 de outubro de 2003, o noivo é formado em Ciencia da Computação pela UEL.
                             Atualmente trabalha como Digital Commerce Specialist em São Paulo. <br />
 
@@ -202,7 +200,7 @@ function OCasal() {
                 <div className="absolute inset-0 bg-white/80"></div>
 
                 {/* Conteúdo */}
-                <div className="relative z-10">
+                <div className="relative z-10 text-left md:text-justify">
                     <h2 className="text-3xl font-serif font-bold text-center text-wedding-olive mb-12">
                         Nossa Linha do Tempo
                     </h2>
@@ -263,7 +261,7 @@ function OCasal() {
                             </div>
                             <div className="flex-grow pb-8">
                                 <h3 className="font-bold text-wedding-olive mb-2">Primeira Viagem de Carro</h3>
-                                <p className="text-gray-700">Aventura até Foz do Iguaçu! Uma viagem inesquecível que fortaleceu ainda mais o laço do casal.</p>
+                                <p className="text-gray-700">Aventura até Foz do Iguaçú! Uma viagem inesquecível que fortaleceu ainda mais o laço do casal.</p>
                             </div>
                         </div>
 
@@ -294,6 +292,21 @@ function OCasal() {
                             <div className="flex-grow pb-8">
                                 <h3 className="font-bold text-wedding-olive mb-2">Troca de Alianças</h3>
                                 <p className="text-gray-700">Um compromisso simbólico e especial, selando a promessa de um futuro juntos.</p>
+                            </div>
+                        </div>
+
+                         {/* Timeline Item 6 - Troca de Alianças */}
+                        <div className="flex gap-4">
+                            <div className="flex-shrink-0 w-32 text-right">
+                                <span className="text-wedding-olive font-bold">4 Fev 2026</span>
+                            </div>
+                            <div className="flex-shrink-0 w-4 flex flex-col items-center">
+                                <div className="w-4 h-4 bg-wedding-rose rounded-full"></div>
+                                <div className="w-0.5 flex-grow bg-wedding-olive/30"></div>
+                            </div>
+                            <div className="flex-grow pb-8">
+                                <h3 className="font-bold text-wedding-olive mb-2">Mudança</h3>
+                                <p className="text-gray-700">Mudança para São Paulo, onde montamos nossa primeira casa juntos.</p>
                             </div>
                         </div>
 
@@ -333,7 +346,7 @@ function OCasal() {
                         </div>
                         <div className="w-full md:w-2/3">
                             <h3 className="text-2xl font-bold text-wedding-olive mb-4">🎲 Jogos de Tabuleiro</h3>
-                            <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
+                            <p className="text-gray-700 leading-relaxed mb-4 text-left md:text-justify" >
                                 Adoramos passar as noites jogando board games! De estratégia a cooperativos,
                                 cada partida é uma nova aventura. Nossos favoritos incluem jogos que desafiam
                                 nossa mente e fortalecem nosso trabalho em equipe.
@@ -374,7 +387,7 @@ function OCasal() {
                         </div>
                         <div className="w-full md:w-2/3">
                             <h3 className="text-2xl font-bold text-wedding-olive mb-4">🎬 Filmes e Séries</h3>
-                            <p className="text-gray-700 leading-relaxed mb-4" style={{ textAlign: "justify" }}>
+                            <p className="text-gray-700 leading-relaxed mb-4 text-left md:text-justify">
                                 Maratonar séries e assistir filmes é nosso programa perfeito!
                                 Pipoca, cobertor e boa companhia.
                             </p>

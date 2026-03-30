@@ -76,7 +76,7 @@ function ACerimonia() {
               15h00
             </p>
             <p className="text-gray-600">
-              Início da Cerimônia
+              Início da Recepção
             </p>
           </div>
         </div>

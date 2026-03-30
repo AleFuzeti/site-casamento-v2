@@ -201,18 +201,18 @@ function ListaPresentes() {
         {/* Mensagem dos Noivos */}
         <section className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20" style={{ textAlign: "justify" }}>
-              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+            <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20 text-left md:text-justify">
+              <p className="text-center text-gray-700 text-lg leading-relaxed text-left md:text-justify">
                 Queridos amigos e familiares,
               </p>
-              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+              <p className="text-center text-gray-700 text-lg leading-relaxed text-left md:text-justify">
                 Como já temos nossa casa e uma vida a dois estabelecida, decidimos criar uma lista de presentes simbólicos, com um toque de humor.
               </p>
-              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+              <p className="text-center text-gray-700 text-lg leading-relaxed text-left md:text-justify">
                 Cada item possui um valor aproximado, para que você possa escolher aquele que mais combina com você e com o carinho que deseja nos oferecer.
                 Ao selecionar um presente, você será redirecionado para o código PIX e QR Code, onde poderá realizar a contribuição de forma simples e segura.
               </p>
-              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+              <p className="text-center text-gray-700 text-lg leading-relaxed text-left md:text-justify">
                 Agradecemos de coração todo o carinho, apoio e amor compartilhados conosco neste momento tão especial.
                 Ter vocês ao nosso lado torna esse dia ainda mais inesquecível.
               </p>

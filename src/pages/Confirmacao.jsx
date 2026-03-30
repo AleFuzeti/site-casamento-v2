@@ -142,7 +142,7 @@ function Confirmacao() {
           zIndex: 1
         }}
       >
-        <h1 className="text-white mb-0" style={{ fontSize: '5.5rem', position: 'fixed', top: '30%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>
+        <h1 className="text-white mb-0" style={{ fontSize: '5.0rem', position: 'fixed', top: '30%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>
           Confirmação
         </h1>
       </section>
@@ -313,11 +313,11 @@ function Confirmacao() {
             <div className="card bg-wedding-rose/10 border-2 border-wedding-rose/30">
               <h3 className="text-xl font-bold text-wedding-olive mb-3">ℹ️ Informações Importantes</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Digite o código que está no seu convite</li>
-                <li>• Confirme sua presença até 01 de maio de 2026</li>
-                <li>• Você pode alterar sua confirmação até a data limite</li>
-                <li>• Em caso de erro, aguarde alguns minutos e tente novamente</li>
-                <li>• Em caso de dúvidas, entre em contato conosco</li>
+                <li>• Digite o código que está no seu convite.</li>
+                <li>• Confirme sua presença até 01 de maio de 2026.</li>
+                <li>• Você pode alterar sua confirmação até a data limite.</li>
+                <li>• Em caso de erro, aguarde alguns minutos e tente novamente.</li>
+                <li>• Em caso de dúvidas, entre em contato conosco.</li>
               </ul>
             </div>
           )}
