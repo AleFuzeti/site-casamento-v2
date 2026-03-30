@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { convidadosService } from '../services/convidadosService'
 
-const DATA_LIMITE = new Date('2026-05-01T23:59:59')
+const DATA_LIMITE = new Date('2026-05-04T23:59:59')
 
 function Confirmacao() {
   const [codigo, setCodigo] = useState('')
