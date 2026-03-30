@@ -82,45 +82,45 @@ function ListaPresentes() {
 
     // Construir payload
     let payload = ''
-    
+
     // 00 - Payload Format Indicator
     payload += formatarCampo('00', '01')
-    
+
     // 26 - Merchant Account Information (PIX)
     const pixInfo = formatarCampo('00', 'br.gov.bcb.pix') + formatarCampo('01', chavePix)
     payload += formatarCampo('26', pixInfo)
-    
+
     // 52 - Merchant Category Code
     payload += formatarCampo('52', '0000')
-    
+
     // 53 - Transaction Currency (986 = BRL)
     payload += formatarCampo('53', '986')
-    
+
     // 54 - Transaction Amount
     if (valor && valor > 0) {
       payload += formatarCampo('54', valor.toFixed(2))
     }
-    
+
     // 58 - Country Code
     payload += formatarCampo('58', 'BR')
-    
+
     // 59 - Merchant Name
     payload += formatarCampo('59', nomeNormalizado)
-    
+
     // 60 - Merchant City
     payload += formatarCampo('60', cidadeNormalizada)
-    
+
     // 62 - Additional Data Field Template
     if (idNormalizado) {
       const additionalData = formatarCampo('05', idNormalizado)
       payload += formatarCampo('62', additionalData)
     }
-    
+
     // 63 - CRC16
     payload += '6304'
     const crc = calcularCrc16(payload)
     payload += crc
-    
+
     return payload
   }
 
@@ -177,47 +177,49 @@ function ListaPresentes() {
 
   return (
     <div className="min-h-screen">
-      {/* Header Section */}
-      <section className="bg-[#8da172] text-white font-bold">
-        {/* <div className="w-full mb-8">
+      {/* Header com Presentes - Wrapper com background */}
+      <div className="relative overflow-hidden">
+        {/* Imagem de fundo */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <img
-            src={`${import.meta.env.BASE_URL}images/header.jpg`}
-            alt="Carolina & Alexandre"
-            className="w-full h-auto"
+            src={`${import.meta.env.BASE_URL}images/pre-57.jpg`}
+            alt="Fundo"
+            className="w-full h-full object-none md:object-cover opacity-80 "
+            style={{ opacity: 0.8, objectPosition: '100% 64%' }}
           />
-        </div> */}
-
-        <div className="section-container flex justify-center" style={{ paddingBottom: 0 }}>
-          <h1 className="page-title text-white mb-0 flex items-center gap-4">
-            <FiHeart className="text-5xl" />
-            Lista de Presentes
-            <FiHeart className="text-5xl" />
-          </h1>
         </div>
-      </section>
 
-      {/* Mensagem dos Noivos */}
-      <section className="bg-[#8da172] section-container">
-        <div className="max-w-4xl mx-auto">
-          <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20" style={{ textAlign: "justify" }}>
-            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
-              Queridos amigos e familiares,
-              </p>
-            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
-              Como já temos a maior parte dos itens necessários para a nossa casa, optamos por uma lista de presentes virtual.
-              Os presentes são simbólicos, com um toque de bom humor, e representam uma contribuição para a nossa lua de mel e para a nossa vida a dois.
-            </p>
-            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
-              Cada item possui um valor aproximado, para que você possa escolher aquele que mais combina com você e com o carinho que deseja nos oferecer.
-              Ao selecionar um presente, você será redirecionado para o código PIX e QR Code, onde poderá realizar a contribuição de forma simples e segura.
-            </p>
-            <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
-              Agradecemos de coração todo o carinho, apoio e amor compartilhados conosco neste momento tão especial.
-              Ter vocês ao nosso lado torna esse dia ainda mais inesquecível.
-            </p>
+        {/* Header Section */}
+        <section className="text-white font-bold relative z-10">
+          <div className="section-container flex justify-center" style={{ paddingBottom: 0 }}>
+            <h1 className="text-white mb-0 flex items-center gap-4 font-normal" style={{ fontSize: '5.5rem' }}>
+              Lista de Presentes
+            </h1>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Mensagem dos Noivos */}
+        <section className="section-container relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="card bg-gradient-to-br from-wedding-rose/10 to-wedding-olive/10 border-2 border-wedding-olive/20" style={{ textAlign: "justify" }}>
+              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+                Queridos amigos e familiares,
+              </p>
+              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+                Como já temos nossa casa e uma vida a dois estabelecida, decidimos criar uma lista de presentes simbólicos, com um toque de humor.
+              </p>
+              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+                Cada item possui um valor aproximado, para que você possa escolher aquele que mais combina com você e com o carinho que deseja nos oferecer.
+                Ao selecionar um presente, você será redirecionado para o código PIX e QR Code, onde poderá realizar a contribuição de forma simples e segura.
+              </p>
+              <p className="text-center text-gray-700 text-lg leading-relaxed" style={{ textAlign: "justify" }}>
+                Agradecemos de coração todo o carinho, apoio e amor compartilhados conosco neste momento tão especial.
+                Ter vocês ao nosso lado torna esse dia ainda mais inesquecível.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* Opções de Presente */}
       <section className="section-container bg-white/50">
@@ -379,8 +381,8 @@ function ListaPresentes() {
                 <button
                   onClick={copiarCodigo}
                   className={`w-full py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 ${copiado
-                      ? 'bg-green-500 text-white'
-                      : 'bg-wedding-olive text-white hover:bg-wedding-olive/80'
+                    ? 'bg-green-500 text-white'
+                    : 'bg-wedding-olive text-white hover:bg-wedding-olive/80'
                     }`}
                 >
                   {copiado ? (

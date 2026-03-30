@@ -142,13 +142,13 @@ function Confirmacao() {
           zIndex: 1
         }}
       >
-        <h1 className="page-title text-white mb-0" style={{ fontSize: '6.5rem', position: 'fixed', top: '30%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>
+        <h1 className="text-white mb-0" style={{ fontSize: '5.5rem', position: 'fixed', top: '30%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1 }}>
           Confirmação
         </h1>
       </section>
 
       <section className="section-container pt-0 px-0" style={{ position: 'relative', zIndex: 2 }}>
-        <div className="max-w-3xl mx-auto">
+        <div className=" p-4 max-w-3xl mx-auto">
         
           <p className="text-center mt-4 text-gray-700 text-lg mb-4">
             Digite seu código de convite para confirmar sua presença

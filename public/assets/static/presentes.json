@@ -1,167 +1,167 @@
 [
     {
+        "nome": "Performance de Shallow",
+        "preco": 600,
+        "foto": "karaoke.jpg"
+    },
+    {
+        "nome": "Carrinho da Shein da noiva",
+        "preco": 900,
+        "foto": "shein.png"
+    },
+    {
+        "nome": "Auxílio na coleção de jogos",
+        "preco": 1100,
+        "foto": "jogos.png"
+    },
+    {
         "nome": "1° mês de almoço",
-        "preco": 150,
+        "preco": 250,
         "foto": "almoco.png"
     },
     {
         "nome": "Mensalidade da academia",
-        "preco": 200,
+        "preco": 300,
         "foto": "academia.png"
     },
     {
         "nome": "Cabelo da noiva",
-        "preco": 250,
+        "preco": 350,
         "foto": "cabelo.png"
     },
     {
-        "nome": "Auxílio na coleção de jogos",
-        "preco": 1000,
-        "foto": "jogos.png"
-    },
-    {
         "nome": "Só pra não dizer que dei nada",
-        "preco": 100,
+        "preco": 200,
         "foto": "carteira.png"
     },
     {
         "nome": "Assinaturas de streaming",
-        "preco": 300,
+        "preco": 400,
         "foto": "gato.png"
     },
     {
         "nome": "Terapia de casal",
-        "preco": 350,
+        "preco": 450,
         "foto": "terapia.png"
     },
     {
         "nome": "Skin care da noiva",
-        "preco": 400,
+        "preco": 500,
         "foto": "skincare.png"
     },
     {
         "nome": "Edredom de tigrinho",
-        "preco": 450,
+        "preco": 550,
         "foto": "tigre.jpg"
     },
     {
-        "nome": "Performance de Shallow",
-        "preco": 500,
-        "foto": "karaoke.jpg"
-    },
-    {
         "nome": "CRP da noiva",
-        "preco": 550,
+        "preco": 650,
         "foto": "crp.png"
     },
     {
         "nome": "Cueca do noivo",
-        "preco": 600,
+        "preco": 700,
         "foto": "lobo.jpg"
     },
     {
         "nome": "Conjunto de panelas antiaderente",
-        "preco": 650,
+        "preco": 750,
         "foto": "panelas.jpg"
     },
     {
         "nome": "20% menos chance de pegar o buquê",
-        "preco": 700,
+        "preco": 800,
         "foto": "buque2.png"
     },
     {
         "nome": "20% mais de chance de pegar o buquê",
-        "preco": 750,
+        "preco": 850,
         "foto": "buque.jpg"
     },
     {
-        "nome": "Carrinho da Shein da noiva",
-        "preco": 800,
-        "foto": "shein.png"
-    },
-    {
         "nome": "Kit completo cozinha",
-        "preco": 900,
+        "preco": 1000,
         "foto": "cozinha.jpg"
     },
     {
         "nome": "Poupança para futuros filhos",
-        "preco": 1100,
+        "preco": 1200,
         "foto": "poupanca.png"
     },
     {
         "nome": "Contribuição no INSS dos noivos",
-        "preco": 1200,
+        "preco": 1300,
         "foto": "inss.png"
     },
     {
         "nome": "Show do My Chemical Romance",
-        "preco": 1300,
+        "preco": 1400,
         "foto": "emo.png"
     },
     {
         "nome": "1° compra do mês",
-        "preco": 1400,
+        "preco": 1500,
         "foto": "mercado.png"
     },
     {
         "nome": "Cadeira gamer do noivo",
-        "preco": 1500,
+        "preco": 1600,
         "foto": "cadeira.jpg"
     },
     {
         "nome": "Botox da noiva",
-        "preco": 1600,
+        "preco": 1700,
         "foto": "botox.png"
     },
     {
         "nome": "Impressora 3D do noivo",
-        "preco": 1700,
+        "preco": 1800,
         "foto": "3d.png"
     },
     {
         "nome": "Forno",
-        "preco": 1800,
+        "preco": 1900,
         "foto": "forno.jpg"
     },
     {
         "nome": "Sorvete do Borelli da noiva",
-        "preco": 1900,
+        "preco": 2000,
         "foto": "sorvete.jpg"
     },
     {
         "nome": "Aluguel do apê",
-        "preco": 2000,
+        "preco": 2500,
         "foto": "aluguel.png"
     },
     {
         "nome": "Carteira de motorista da noiva",
-        "preco": 2500,
+        "preco": 3000,
         "foto": "motorista.jpg"
     },
     {
         "nome": "PC do noivo",
-        "preco": 3000,
+        "preco": 3500,
         "foto": "pc.jpg"
     },
     {
         "nome": "Geladeira",
-        "preco": 3500,
+        "preco": 4000,
         "foto": "geladeira.jpg"
     },
     {
         "nome": "Cruzeiro de lua de mel",
-        "preco": 4000,
+        "preco": 4500,
         "foto": "Titanic.png"
     },
     {
         "nome": "Prioridade para visitar os noivos",
-        "preco": 4500,
+        "preco": 5000,
         "foto": "visita.png"
     },
     {
         "nome": "Cama de visita",
-        "preco": 5000,
+        "preco": 5500,
         "foto": "cama.png"
     },
     {

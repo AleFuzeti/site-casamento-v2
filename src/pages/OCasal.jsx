@@ -42,7 +42,7 @@ function OCasal() {
 
 
             {/* Nossa História */}
-            <section className="pt-8 bg-[#8da172] w-full px-16" style={{ textAlign: "justify" }}>
+            <section className="pt-8 bg-[#8da172] w-full px-4 md:px-16" style={{ textAlign: "justify" }}>
                 <div className="w-full pb-4">
                     <div className="text-center mb-4 mx-0">
                         <h2 className="text-white mx-0 page-title font-serif font-bold mb-4">
@@ -103,17 +103,17 @@ function OCasal() {
             </section>
 
             {/* Reflexão Final */}
-            <section 
-              className="py-16 relative border-t-2 border-b-2 border-wedding-olive/20"
-              style={{
-                backgroundImage: `url(${import.meta.env.BASE_URL}images/pag1.jpg)`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center',
-                backgroundRepeat: 'no-repeat'
-              }}
+            <section
+                className="py-16 relative border-t-2 border-b-2 border-wedding-olive/20"
+                style={{
+                    backgroundImage: `url(${import.meta.env.BASE_URL}images/pag1.jpg)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    backgroundRepeat: 'no-repeat'
+                }}
             >
-              <div className="absolute inset-0 "></div>
-              <div className="max-w-3xl mx-auto px-8 relative z-10">
+                <div className="absolute inset-0 "></div>
+                <div className="max-w-3xl mx-auto px-8 relative z-10">
                     <p className="text-center text-wedding-olive text-2xl font-serif mb-6">
                         ・ ✦ ・
                     </p>
@@ -130,7 +130,7 @@ function OCasal() {
             </section>
 
             {/* Os Noivos */}
-            <section className="px-16 mx-0 py-12 w-full bg-[#8da172]">
+            <section className="px-4 mx-0 py-12 w-full bg-[#8da172]">
                 <div className="grid md:grid-cols-2 w-full gap-8 max-w-5xl mx-auto">
                     {/* Noiva */}
                     <div className="card text-center">
@@ -152,8 +152,8 @@ function OCasal() {
                         </h3>
                         <p className="text-gray-600 mb-4">A Noiva</p>
                         <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
-                            Nascida em 06 de março de 2001, a noiva pisciana é formada em Psicologia pela UEL, atuando em clínica particular e orientação profissional. <br/>
-                            Extremamente planejada e animada, a noiva adora cozinhar, cultivar plantas, pintar aquarelas e cantar. <br/>
+                            Nascida em 06 de março de 2001, a noiva pisciana é formada em Psicologia pela UEL, atuando em clínica particular e orientação profissional. <br />
+                            Extremamente planejada e animada, a noiva adora cozinhar, cultivar plantas, pintar aquarelas e cantar. <br />
                             O que Alexandre mais admira na Carol é seu <strong>companheirismo, sinceridade e inteligência</strong>.
                         </p>
                     </div>
@@ -178,10 +178,10 @@ function OCasal() {
                         </h3>
                         <p className="text-gray-600 mb-4">O Noivo</p>
                         <p className="text-gray-700 leading-relaxed" style={{ textAlign: "justify" }}>
-                            Nascido em 27 de outubro de 2003, o noivo é formado em Ciencia da Computação pela UEL. 
-                            Atualmente trabalha como Digital Commerce Specialist em São Paulo. <br/>
-            
-                            O noivo adora ouvir música, ler ficção e também gosta de jogar e mestrar RPG. <br/>
+                            Nascido em 27 de outubro de 2003, o noivo é formado em Ciencia da Computação pela UEL.
+                            Atualmente trabalha como Digital Commerce Specialist em São Paulo. <br />
+
+                            O noivo adora ouvir música, ler ficção e também gosta de jogar e mestrar RPG. <br />
                             O que Carolina mais admira no Ale é sua <strong>bondade, espontaneidade e companheirismo</strong>.
                         </p>
                     </div>
@@ -438,61 +438,61 @@ function OCasal() {
             </section>
 
             {/* Quick Info Section */}
-            <section 
-              className="w-full bg-white/50 relative py-12 px-16"
-              style={{
-                backgroundImage: `url(${import.meta.env.BASE_URL}images/pag1.jpg)`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center 69%',
-                backgroundRepeat: 'no-repeat'
-              }}
+            <section
+                className="w-full bg-white/50 relative py-12 px-16"
+                style={{
+                    backgroundImage: `url(${import.meta.env.BASE_URL}images/pag1.jpg)`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center 69%',
+                    backgroundRepeat: 'no-repeat'
+                }}
             >
-              <div className="absolute inset-0 "></div>
-              <div className="relative z-10 max-w-5xl mx-auto">
-                <div className="grid md:grid-cols-3 gap-8">
-                    <Link
-                        to="/confirmacao"
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="card text-center hover:scale-105 transition-transform duration-300"
-                    >
-                        <FiHeart className="text-wedding-rose text-5xl mx-auto mb-4" />
-                        <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
-                            Confirme sua presença
-                        </h3>
-                        <p className="text-gray-600">
-                            Confirme sua presença
-                        </p>
-                    </Link>
+                <div className="absolute inset-0 "></div>
+                <div className="relative z-10 max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <Link
+                            to="/confirmacao"
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                            className="card text-center hover:scale-105 transition-transform duration-300"
+                        >
+                            <FiHeart className="text-wedding-rose text-5xl mx-auto mb-4" />
+                            <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
+                                Confirme sua presença
+                            </h3>
+                            <p className="text-gray-600">
+                                Confirme sua presença
+                            </p>
+                        </Link>
 
-                    <Link
-                        to="/a-cerimonia"
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="card text-center hover:scale-105 transition-transform duration-300"
-                    >
-                        <FiCalendar className="text-wedding-olive text-5xl mx-auto mb-4" />
-                        <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
-                            A Cerimônia
-                        </h3>
-                        <p className="text-gray-600">
-                            Data, local e informações
-                        </p>
-                    </Link>
+                        <Link
+                            to="/a-cerimonia"
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                            className="card text-center hover:scale-105 transition-transform duration-300"
+                        >
+                            <FiCalendar className="text-wedding-olive text-5xl mx-auto mb-4" />
+                            <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
+                                A Cerimônia
+                            </h3>
+                            <p className="text-gray-600">
+                                Data, local e informações
+                            </p>
+                        </Link>
 
-                    <Link
-                        to="/lista-presentes"
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="card text-center hover:scale-105 transition-transform duration-300"
-                    >
-                        <FiGift className="text-wedding-rose text-5xl mx-auto mb-4" />
-                        <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
-                            Lista de Presentes
-                        </h3>
-                        <p className="text-gray-600">
-                            Escolha seu presente
-                        </p>
-                    </Link>
+                        <Link
+                            to="/lista-presentes"
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                            className="card text-center hover:scale-105 transition-transform duration-300"
+                        >
+                            <FiGift className="text-wedding-rose text-5xl mx-auto mb-4" />
+                            <h3 className="text-2xl font-serif font-bold text-wedding-olive mb-2">
+                                Lista de Presentes
+                            </h3>
+                            <p className="text-gray-600">
+                                Escolha seu presente
+                            </p>
+                        </Link>
+                    </div>
                 </div>
-              </div>
             </section>
 
 
